@@ -1,5 +1,17 @@
-const checkClasp = require( './lib/check-clasp' );
+const getInit = require( './lib/get-init-options' ),
+  eslintOptions = require( './config/eslint-config-deps.json' ),
+  createPkgObj = require( './config/package-stub' );
 
-const hasClasp = checkClasp();
+( async () => {
+  const initOptions = await getInit();
 
-console.log( hasClasp );
+  if ( !initOptions.eslintUseExisting ) {
+    const eslintConfig = initOptions.eslintConfigType;
+    initOptions.eslint = eslintOptions[ eslintConfig ].package.devDependencies;
+  } else {
+    initOptions.eslint = { }
+  }
+  const package = createPkgObj( initOptions );
+
+
+} )();

@@ -1,3 +1,6 @@
+const { print } = require( 'q-i' );
+const chalk = require( 'chalk' );
+
 /**
  * @param {*} options
  */
@@ -24,17 +27,11 @@ function createPackageFile( options ) { // eslint-disable-line no-unused-vars
       'babel-plugin-array-includes'                        : '^2.0.3',
       'clean-webpack-plugin'                               : '^0.1.19',
       'copy-webpack-plugin'                                : '^4.6.0',
-      'dayjs'                                              : '^1.7.7', // ANCHOR
       'eslint'                                             : '^5.9.0',
-      'eslint-config-airbnb-base'                          : '^13.1.0', // ANCHOR
-      'eslint-config-prettier'                             : '^3.1.0', // ANCHOR
       'eslint-loader'                                      : '^2.1.1',
       'eslint-plugin-googleappsscript'                     : '^1.0.1',
-      'eslint-plugin-import'                               : '^2.14.0', // ANCHOR
-      'eslint-plugin-prettier'                             : '^3.0.0', // ANCHOR
       'gas-lib'                                            : '^2.0.2',
       'gas-webpack-plugin'                                 : '^0.3.0',
-      'prettier'                                           : '^1.15.1', // ANCHOR
       'uglifyjs-webpack-plugin'                            : '^2.0.1',
       'webpack'                                            : '^4.25.1',
       'webpack-cli'                                        : '^3.1.2'
@@ -54,6 +51,13 @@ function createPackageFile( options ) { // eslint-disable-line no-unused-vars
     },
     'version': options.version || '0.0.1'
   };
+
+  Object.keys( options.eslint ).forEach( ( dep ) => {
+    packageObj.devDependencies[ dep ] = options.eslint[ dep ];
+  } );
+
+  console.log( chalk.grey( `Printed from ${__filename}` ) );
+  print( packageObj );
 
   return packageObj;
 }

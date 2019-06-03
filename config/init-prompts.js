@@ -1,4 +1,5 @@
-const fs = require( 'fs' );
+const fs = require( 'fs' ),
+  path = require( 'path' );
 
 // ANCHOR module.exports
 module.exports = ( rcFile ) => {
@@ -33,22 +34,27 @@ module.exports = ( rcFile ) => {
         'type'    : 'text'
       },
       {
-        'message' : 'Use existing .eslintrc file?',
+        'message' : 'Use an existing .eslintrc file?',
         'name'    : 'eslintUseExisting',
         'type'    : 'confirm'
       },
       {
+        'choices': [
+          'eslint:recommended',
+          'standard',
+          'airbnb-base'
+        ],
         'default' : 'eslint:recommended',
         'message' : 'ESLint Configuration',
         'name'    : 'eslintConfigType',
-        'type'    : 'text',
+        'type'    : 'list',
         'when'    : answers => !answers.eslintUseExisting
       },
       {
         'message'  : 'Path to eslintrc file: ',
         'name'     : 'eslintPath',
-        'type'     : 'text',
-        'validate' : input => fs.existsSync( input ),
+        'type'     : 'list',
+        'validate' : input => fs.existsSync( path.resolve( input ) ),
         'when'     : answers => answers.eslintUseExisting
       },
       {
