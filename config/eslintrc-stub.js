@@ -6,7 +6,7 @@ const yaml = require('js-yaml');
  * @returns
  */
 function createEslintObj( options ) { // eslint-disable-line no-unused-vars
-  const defaultOpts = {
+  const defaultConfig = {
     'env': {
       'amd'                               : true,
       'es6'                               : true,
@@ -41,9 +41,25 @@ function createEslintObj( options ) { // eslint-disable-line no-unused-vars
 
     if ( options.eslintShouldModify ) {
       // Load eslintrc file into object and perform transformation
-      const 
-    }
+      Object.keys(defaultConfig).forEach(key => {
+        if (key === 'extends') return;
+        if (key === 'plugins') {
+           eslintObj[key] = eslintObj[key].concat(defaultConfig[key]);
+           return;
+        }
 
+        eslintObj[key] = defaultConfig[key];
+      });
+    }
+    
     return eslintObj;
   }
+
+
+  defaultConfig['extends'] = options.eslintConfigType;
+  
+  return defaultConfig;
+  
 };
+
+ module.exports = createEslintObj;
