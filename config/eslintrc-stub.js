@@ -1,3 +1,6 @@
+const path = require('path');
+const yaml = require('js-yaml');
+
 /**
  * @param {*} options
  * @returns
@@ -28,10 +31,17 @@ function createEslintObj( options ) { // eslint-disable-line no-unused-vars
 
   if ( options.eslintUseExisting ) {
     // eslint-disable-next-line global-require
-    const eslintObj = require( options.eslintPath );
+    const eslintRulePath = options.eslintPath;
+    const extension = path.ext(options.eslintPath);
+    const loader = (extension === 'yaml' || extension === 'yml') ?
+        (p) => yaml.safeLoad(fs.readFileSync(p, 'utf8')) :
+        (p) => require(p);
+ 
+    const eslintObj = loader(eslintRulePath);
 
     if ( options.eslintShouldModify ) {
-      // Load eslintrc file into object and perform transformations
+      // Load eslintrc file into object and perform transformation
+      const 
     }
 
     return eslintObj;
