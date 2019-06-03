@@ -1,33 +1,35 @@
 const path = require('path');
+const eslintConfigDeps = require('./eslint-config-deps.json');
 const yaml = require('js-yaml');
+
+const defaultConfig = {
+  'env': {
+    'amd'                               : true,
+    'es6'                               : true,
+    'googleappsscript/googleappsscript' : true,
+    'node'                              : true
+  },
+  'extends' : '',
+  'globals' : {
+    'Calendar'    : false,
+    'CardService' : true,
+    'Drive'       : true,
+    'FirebaseApp' : true,
+    'Gmail'       : true,
+    'OAuth1'      : true,
+    'OAuth2'      : true,
+    'Slides'      : true
+  },
+  'parser'  : 'babel-eslint',
+  'plugins' : [ 'googleappsscript' ],
+  'root'    : true
+};
 
 /**
  * @param {*} options
  * @returns
  */
-function createEslintObj( options ) { // eslint-disable-line no-unused-vars
-  const defaultConfig = {
-    'env': {
-      'amd'                               : true,
-      'es6'                               : true,
-      'googleappsscript/googleappsscript' : true,
-      'node'                              : true
-    },
-    'extends' : '', // REVIEW
-    'globals' : {
-      'Calendar'    : false,
-      'CardService' : true,
-      'Drive'       : true,
-      'FirebaseApp' : true,
-      'Gmail'       : true,
-      'OAuth1'      : true,
-      'OAuth2'      : true,
-      'Slides'      : true
-    },
-    'parser'  : 'babel-eslint',
-    'plugins' : [ 'googleappsscript' ],
-    'root'    : true
-  };
+function createEslintObj( options ) { // eslint-disable-line no-unused-var
 
   if ( options.eslintUseExisting ) {
     // eslint-disable-next-line global-require
@@ -57,6 +59,7 @@ function createEslintObj( options ) { // eslint-disable-line no-unused-vars
 
 
   defaultConfig['extends'] = options.eslintConfigType;
+  
   
   return defaultConfig;
   
