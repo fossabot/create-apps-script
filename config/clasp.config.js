@@ -1,5 +1,9 @@
-const clasp = {
-  'scriptId': '',
-  'projectId': '',
-  'rootDir': './dist'
+const clasp = (scriptId, projectId) => {
+  return {
+    'scriptId': scriptId,
+    'projectId': projectId,
+    'rootDir': './dist'
+  }
 }
+
+module.exports = clasp;
