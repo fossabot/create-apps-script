@@ -1,13 +1,13 @@
 {
-  "eslint:recommended":{
-    "eslintrc":{
+  "eslint:recommended": {
+    "eslintrc": {
       "extends": "eslint:recommended",
       "plugins": [
 
       ]
     },
-    "package":{
-      "devDependencies":{
+    "package": {
+      "devDependencies": {
 
       }
     }
@@ -35,13 +35,15 @@
   "airbnb-base": {
     "eslintrc": {
       "extends": "airbnb-base",
-      "plugins" : [
+      "plugins": [
         "import"
       ]
     },
-    "package":{
-      "eslint-config-airbnb-base": "13.1.0",
-      "eslint-plugin-import": "^2.17.3"
+    "package": {
+      "devDependencies": {
+        "eslint-config-airbnb-base": "13.1.0",
+        "eslint-plugin-import": "^2.17.3"
+      }
     }
   }
 }
