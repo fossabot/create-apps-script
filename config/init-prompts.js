@@ -34,8 +34,10 @@ module.exports = ( rcFile ) => {
         'type'    : 'text'
       },
       {
-        'message' : 'Use an existing .eslintrc file?',
+        'default' : true,
+        'message' : 'Create new ESLint ruleset for project? ( Recommended )',
         'name'    : 'eslintUseExisting',
+        /* This value is used inversely from what its name implies so that should be fixed */
         'type'    : 'confirm'
       },
       {
@@ -48,20 +50,20 @@ module.exports = ( rcFile ) => {
         'message' : 'ESLint Configuration',
         'name'    : 'eslintConfigType',
         'type'    : 'list',
-        'when'    : answers => !answers.eslintUseExisting
+        'when'    : answers => answers.eslintUseExisting
       },
       {
         'message'  : 'Path to eslintrc file: ',
         'name'     : 'eslintPath',
-        'type'     : 'list',
+        'type'     : 'text',
         'validate' : input => fs.existsSync( path.resolve( input ) ),
-        'when'     : answers => answers.eslintUseExisting
+        'when'     : answers => !answers.eslintUseExisting
       },
       {
         'message' : 'Modify eslintrc file to include Apps-Script related settings?',
         'name'    : 'eslintShouldModify',
         'type'    : 'confirm',
-        'when'    : answers => answers.eslintUseExisting
+        'when'    : answers => !answers.eslintUseExisting
       }
     ]
   }; };

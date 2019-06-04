@@ -4,7 +4,10 @@
       "standard"
   ],
   "plugins": [
-
+    "import",
+    "standard",
+    "node",
+    "promise"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -78,7 +81,7 @@
     "consistent-this": "error",
     "curly": [
       "error",
-      "multi-or-nest"
+      "multi-line"
     ],
     "default-case": "error",
     "dot-location": [

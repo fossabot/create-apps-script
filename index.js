@@ -1,17 +1,18 @@
 const getInit = require( './lib/get-init-options' ),
-  eslintOptions = require( './config/eslint-config-deps.json' ),
-  createPkgObj = require( './config/package-stub' );
+  createPkgObj = require( './config/package.json.config' ),
+  createEslintObj = require( './config/eslintrc.config' ),
+  eslintOptions = require( './config/eslintrc.config.opts.json' );
 
-( async () => {
+( async() => {
   const initOptions = await getInit();
 
   if ( !initOptions.eslintUseExisting ) {
     const eslintConfig = initOptions.eslintConfigType;
     initOptions.eslint = eslintOptions[ eslintConfig ].package.devDependencies;
   } else {
-    initOptions.eslint = { }
+    initOptions.eslint = { };
   }
-  const package = createPkgObj( initOptions );
+  const pkg = createPkgObj( initOptions );
 
-
+  const eslintrc = createEslintObj( initOptions );
 } )();
