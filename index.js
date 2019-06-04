@@ -1,10 +1,17 @@
-const getInit = require( './lib/get-init-options' ),
-  createPkgObj = require( './config/package.json.config' ),
-  createEslintObj = require( './config/eslintrc.config' ),
-  eslintOptions = require( './config/eslintrc.config.opts.json' );
+const process = require( 'process' );
+
+const getInit = require( './lib/get-init-options' );
+const createPkgObj = require( './config/package.config' );
+const createEslintObj = require( './config/eslintrc.config' );
+const eslintOptions = require( './config/eslint-config-associations.json' );
+
+const schemas = require( './schemas' );
 
 ( async() => {
-  const initOptions = await getInit();
+  const args = process.argv.slice( 2 );
+  const workDir = args[ 0 ] || process.cwd();
+
+  const initOptions = await getInit( workDir );
 
   if ( !initOptions.eslintUseExisting ) {
     const eslintConfig = initOptions.eslintConfigType;

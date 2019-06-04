@@ -1,11 +1,12 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 const yaml = require( 'js-yaml' );
-const configOptions = require( './eslintrc.config.opts.json' );
-// ──────────────────────────────────────────────────
+const ajv = require( 'ajv' );
+const configOptions = require( './eslint-config-associations.json' );
+// SECTION Development modules
 const { print } = require( 'q-i' );
 const chalk = require( 'chalk' );
-// ──────────────────────────────────────────────────
+// !SECTION Development modules
 
 const defaultConfig = {
   'env': {
@@ -116,6 +117,14 @@ function createNewEslintObj( options ) {
   defaultConfig.plugins = defaultConfig.plugins.concat( optionsExtensions.plugins );
 
   return defaultConfig;
+}
+
+/**
+ * Validated the produced object against the official schema
+ * @param {*} rules
+ */
+function verifyRuleObject( rules ) {
+
 }
 
 /**
