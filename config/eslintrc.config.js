@@ -8,10 +8,7 @@ const { print } = require( 'q-i' );
 const chalk = require( 'chalk' );
 // !SECTION Development modules
 
-
-
 let config = {};
-
 
 /**
  * Modifies the imported eslintrc config object with rules specialized for GAS development

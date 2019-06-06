@@ -17,9 +17,9 @@ const configFileObjs = { /*
 
 ( async() => {
   const args = process.argv.slice( 2 );
-  const workDir = args[ 0 ] || process.cwd();
+  const target = args[ 0 ] || process.cwd();
 
-  const initOptions = await prompt( workDir );
+  const initOptions = await prompt( target );
 
   if ( !initOptions.eslintUseExisting ) {
     const eslintConfig = initOptions.eslintConfigType;

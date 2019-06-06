@@ -110,24 +110,30 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 
 ### Eslint
 
-At project initialization, the user is asked whether the script should create a new eslint configuration for this project, or import the values of an existing configuration.
+In order to provide an eslint configuration file for the environment, `create-gas-project` exports an object containing eslint config values that are specific to the Apps Script environment. These values are:
 
-
-#### EXTENDING
-
-The user is prompted for the path to their preferred configuration. Relative paths are resolved internally.
-Once confirmed to be valid, the resolved absolute path is then assigned as the value of the `"``extends``"` field for the project’s eslint configuration.
-
-**Project Eslint Configuration**
-The following settings are required in the Apps Script project’s development directory eslint configuration to ensure all tooling works as expected:
-
-- **plugins:** “googleappsscript”
+- **plugins:** `[ "googleappsscript" ]`
 - **globals:** A number of properties assigned to the globals object, including:
     - Symbols for globally exposed classes for interacting with Google services within the Apps Script runtime (*i.e., CalendarApp, SpreadsheetApp, etc., as well as utilities such as PropertiesService, HtmlOutput, and so on*).
     - Symbols for “Advanced service” API-wrapper classes (*Such as Calendar*)
     - Symbols for the user-defined libraries, if applicable (see section Existing Script Project Setup)
 - **env:** property “googleappsscript/googleappsscript” assigned value `true`
-- **parser:** assigned `"``babel-eslint``"`
+- **parser:** `"``babel-eslint``"`
+
+In order to provide a complete and valid configuration to eslint, `create-gas-project` then adds an `extends` property to the object and prompts the user to select a value from the following:
+- 'eslint:recommended' (default)
+- 'standard'
+- 'airbnb-base'
+- A file system path to another configuration file
+
+
+
+
+
+Once confirmed to be valid, the resolved absolute path is then assigned as the value of the `"``extends``"` field for the project’s eslint configuration.
+
+**Project Eslint Configuration**
+The following settings are required in the Apps Script project’s development directory eslint configuration to ensure all tooling works as expected:
 
 <br>
 
