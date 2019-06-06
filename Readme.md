@@ -3,6 +3,8 @@
 #  `create-gas-project`
 ## A Google Apps Script Development & Management Assistant
 
+# claim create-apps-script 
+
 [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 [![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project)
@@ -16,7 +18,7 @@
 
 ## To use `create-gas-project`:
 #### **⚠️ *No Install Required***
-  > **`create-gas-project`** **doesn't need to be installed as a global or local module** to start configuring new projects, or even help you organize your existing projects.
+  > **`create-gas-project`** **doesn't need to be installed as a global or local module** to serve its purpose. For more information, 
 
 1. **Run** the init script using your preferred package manager:
     > *If `destination` is omitted, the default is the **current working directory***
