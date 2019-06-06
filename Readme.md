@@ -46,7 +46,7 @@
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
   </a>
 
-</p
+</p>
 
 <br>
 
@@ -58,23 +58,21 @@
 
 <br>
 
-## :construction_worker: Using `create-gas-project`
+## Construct a New Environment :construction_worker:
 
 1. <b>Run command to `init` a new project</b>, using your package manager of choice:
-    >   - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
+    >  - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
     >  - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
     ><br><br><b>Note</b> - *If <b>`destination`</b> is omitted, the <b>current working directory</b> is used as the new project's root*
 2. <b>Answer</b> the prompts and configure your development workspace.
 3. <b>Install</b> dependencies using preferred package manager
-<!-- slide -->
-
 
 <br>
 
-<p style="font-size: 26px;">Resulting Project Directory Tree</p>
+Resulting Project Directory Tree
 
 ```text
-  project/
+  [target]/
     - .babelrc
     - .editorconfig
     - .eslintrc
