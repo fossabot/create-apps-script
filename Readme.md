@@ -110,15 +110,51 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 
 ### Eslint
 
-In order to provide an eslint configuration file for the environment, `create-gas-project` exports an object containing eslint config values that are specific to the Apps Script environment. These values are:
+In order to provide an eslint configuration file for the environment, `create-gas-project` exposes a partial eslint configuration object, containing properties and values specific to the Apps Script environment & tooling.
 
-- **plugins:** `[ "googleappsscript" ]`
-- **globals:** A number of properties assigned to the globals object, including:
-    - Symbols for globally exposed classes for interacting with Google services within the Apps Script runtime (*i.e., CalendarApp, SpreadsheetApp, etc., as well as utilities such as PropertiesService, HtmlOutput, and so on*).
-    - Symbols for “Advanced service” API-wrapper classes (*Such as Calendar*)
-    - Symbols for the user-defined libraries, if applicable (see section Existing Script Project Setup)
-- **env:** property “googleappsscript/googleappsscript” assigned value `true`
-- **parser:** `"``babel-eslint``"`
+***-- Base ESlint Configuration Object --***
+>```JSON
+>    {
+>      "root" : true,
+>      "plugins": [
+>        "googleappsscript"
+>      ],
+>      "globals": {
+>        "Calendar": true,
+>        "CalendarApp": true,
+>        "CardService": true,
+>        "Charts": true,
+>        "ContactsApp": true,
+>        "DataStudioApp": true,
+>        "DocumentApp": true,
+>        "Drive": true,
+>        "DriveApp": true,
+>        "FirebaseApp": true,
+>        "FormApp": true,
+>        "Gmail": true,
+>        "GmailApp": true,
+>        "GroupsApp": true,
+>        "HtmlService": true,
+>        "LanguageApp": true,
+>        "MailApp": true,
+>        "Maps": true,
+>        "OAuth1": true,
+>        "OAuth2": true,
+>        "PropertiesService": true,
+>        "SitesApp": true,
+>        "Slides": true,
+>        "SlidesApp": true,
+>        "SpreadsheetApp": true
+>      },
+>      "env": {
+>        “googleappsscript/googleappsscript” : true
+>      },
+>      "parser": "babel-eslint",
+>      "parseroptions" : {
+>        "sourceType" : "module"
+>      }
+>    }
+>```
 
 In order to provide a complete and valid configuration to eslint, `create-gas-project` then adds an `extends` property to the object and prompts the user to select a value from the following:
 - 'eslint:recommended' (default)

@@ -1,7 +1,6 @@
 const defaultConfig = {
   'env': {
     'amd': true,
-    'es6': true,
     'googleappsscript/googleappsscript': true,
     'node': true
   },
@@ -34,6 +33,9 @@ const defaultConfig = {
     'SpreadsheetApp': true
   },
   'parser': 'babel-eslint',
+  'parserOptions': {
+    'sourceType': 'module'
+  }
   'plugins': [ 'googleappsscript' ],
   'root': true
 };
