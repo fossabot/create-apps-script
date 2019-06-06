@@ -4,17 +4,18 @@
 
   [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) **|** [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 
-  ➡️ Deploy local Google Apps Script development environments featuring delivery, integraion & tooling
+  🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
 --
 
 ## To initialize a local Apps Script Evironment:
 #### **⚠️ *No Install Required***
-  > **`create-gas-project`** **doesn't need to be installed as a global or local module** to start configuring new projects or organizing existing projects.
+  > **`create-gas-project`** **doesn't need to be installed as a global or local module** to start configuring new projects, or even help you organize your existing projects.
 
 
-1. **Run** the init script:
+1. **Run** the init script using your preferred package manager:
      - Using **npm**: **`npm init gas-project [destination]`**
      - Using **yarn**: **`yarn create gas-project [destination]`**
+     > ℹ️ *If `destination` is omitted, the default is the current directory*
 2. **Answer** the prompts to configure your development workspace.
 3. **Install** node dependencies
 #### *Setup Finished!*
@@ -24,7 +25,8 @@
 <br>
 
 
-[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
+##  📋 Vitals
+[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) ♥️ [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() 🌡 [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
 
 ⚙️ [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 
@@ -37,7 +39,7 @@
 
 
 
-## 🚀 **Init A Script Project**
+## **Init A Script Project**
 **`<npm init|yarn create> gas-project [target]`**
 
 ### Arguments
