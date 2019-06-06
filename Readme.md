@@ -18,40 +18,50 @@
 
 
 ## No Installation Required :no_entry_sign:
-As package initializers, `create-gas-project` and other packages published under a `create-*` name, is handled slightly differently by package managers. Intended to establish the foundation of a **new and specialized projec**t, `create-*` modules are typically not installed within the projects they configure, and therefore add **no extra dependency maintenance overhead**.
+As an "init-package" ... well, package ... `create-gas-project` **shouldn't be installed globally or locally**. 
+Nor is it necessary to list `create-gas-project` as a development dependency, since its main purpose is setting up the configurations of the modules that **will be** the development dependencies.
 
-## **Command**
-**`[npm|yarn] [init|create] gas-project [target]`**
+Once the project is established, `create-gas-project` simply saunters off towards the horizon, silhouetted by a setting sun.
 
-Where `package manager` is `yarn` or `npm`, and `init command` is `create` or `init` respectively,
-and `target` is a relative or absolute path to an existing directory to initialize as the root of a new development environment.
+## **Init New Project**
+**`<npm init|yarn create> gas-project [target]`**
 
-**If not specified, `target` will default to the current working directory.**
-
-| **Action** | **Command ( npm )** | **Command ( yarn )** |
-|---|-----|------|
-| **Initialize**            | `npm init gas-project [target]`  | `yarn create gas-project [target]`       |
-| *cd target, if specified* | *`cd [target]`*                  | *`cd [target]`*   |
-| **Install Dependencies**  | `npm install`                    | `yarn add`        |
+### Arguments
+| Name | Required | Description |
+|--|--|--|
+| `target` | **No** <br> **Default** : CWD when invoked | a relative or absolute path to an existing directory to initialize as the root of a new development environment. |
 
 <br/>
 
 ## CLI Prompt & Package.json Field Default Values
 #### Package manager rc files --[ `.npmrc` , `.yarnrc` ]
-The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files. If there are multiple results found within or accross the searched directories,project-level configuration is preferred over user-level.
+The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files. 
+In the scenario that rc files are found accross multiple searched directories, project-level configuration is preferred over user-level.
 Should both rc file types be located **and** both have equal preference, the user is prompted to select an rc file from a list.
 
-The values from the resulting rc file are parsed, and the relevant fields are used as defaults during the following prompts.
-
-In the case that no rc files are found, general fallback defaults are provided.
-
+The values from the resulting rc file are parsed into JSON, and the relevant properties are supplied as default responses to following prompts
 
 ---
 
 # Resulting Project
 ## Files & Directory Tree
 ```
-
+  project/
+    - .babelrc
+    - .editorconfig
+    - .eslintrc
+    - .eslintignore
+    - .gitignore
+    - webpack.config.js
+    + config/
+      appsscript.json
+      .clasp.json
+        [ ... ]
+    + dist/
+      [ if existing Script Project, files are pulled here -- else am empty dir ]
+    + src/
+      - index.js
+      - main.js
 ```
 
 ## Environment & Configuration
