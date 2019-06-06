@@ -47,7 +47,13 @@ In the case that no rc files are found, general fallback defaults are provided.
 
 
 ---
-# Results
+
+# Resulting Project
+## Files & Directory Tree
+```
+
+```
+
 ## Environment & Configuration
 
 ### Package.json
