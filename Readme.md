@@ -1,11 +1,12 @@
 
 <h1 align=" center"> 
-  <pre>
-    create-gas-project
-  </pre>
+  <pre>create-gas-project</pre>
 </h1>
 
-> ## A Project-Scaffolder, Config-Contraptionator, and Dev-Tool Wrangler for Google Apps Script Development in the Modern Age
+<h2 align=" center"> 
+  Project-Scaffolder<br>Config-Contraptionator<br>DevTool-Assimilator<br>Local Google Apps Script Dev-Env-Init-ifier
+</h2>
+
 <br>
 
 [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
