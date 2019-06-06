@@ -1,33 +1,40 @@
-<div style="text-align: center;">
 
-  <h1 style="font-size: 3rem">
-   create-gas-project
-  </h1>
 
-  <span style="font-size: 2rem; color: #D60808; font-weight: 700;"> `npm init gas-project ./` <span style="color: black; opacity: 0.2">  || </span> `yarn create gas-project ./` </span>
+  #  create-gas-project :node
+
+   [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) **|** [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
+
+   Initialize a local development environment with complete integraion & tooling for Google Apps Script ➡️
   --
-  <br>
-  <span style="font-size: 1.75rem; font-weight: 500;">Initialize a local environment specially configured for development of a new or existing Google Apps Script project.</span>
+  ### ***No Install Necessary*** - **`create-gas-project`** **doesn't neet any installation as a global or local module** to start configuring new projects or organizing existing projects.
 
-  [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() <br>
-  [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project) [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev) <br>
-  [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-  --
-  <br>
+  ### To initialize a local Apps Script Evironment:
+
+  1. **Run** the init script:
+    - Using **npm**: **`npm init gas-project [destination]`**
+    - Using **yarn**: **`yarn create gas-project [destination]`**
+  2. **Answer** the prompts to configure your development workspace.
+  3. Then simply **install** the dependencies with: **`npm i`** / **`yarn add`** in the root of the project.
+
   ---
 
-<span style="font-size: 1.75rem">***No Install Necessary***</span>
-As an **"[init-package](https://docs.npmjs.com/cli/init) package"**, `create-gas-project` **needn't be installed**, not globally or locally, in order to carry out its **`init`-y goodness** . Nor is it behooving to list `create-gas-project` as a development dependency, since its main purpose is setting up the configurations of the modules that **will be installed** as the development dependencies.
+  <br>
 
-Once the project is established, `create-gas-project` simply saunters off towards the horizon, silhouetted by a setting sun.
-</div>
-<br>
+
+  [![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
+
+  ⚙️ [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
+
+  🕶 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
+  <br>
+
 
 # Usage
 
 
 
-## 🚀 **Init New Project**
+## 🚀 **Init A Script Project**
 **`<npm init|yarn create> gas-project [target]`**
 
 ### Arguments
