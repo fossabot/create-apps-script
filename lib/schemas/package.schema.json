@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "JSON schema for NPM package.json files",
   "definitions": {
     "person": {

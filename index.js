@@ -1,25 +1,33 @@
 const process = require( 'process' );
 
-const getInit = require( './lib/get-init-options' );
-const createPkgObj = require( './config/package.config' );
-const createEslintObj = require( './config/eslintrc.config' );
+const prompt = require( './lib/prompt' );
+const packageConfig = require( './config/package.config' );
+const eslintrcConfig = require( './config/eslintrc.config' );
 const eslintOptions = require( './config/eslint-config-associations.json' );
 
-const schemas = require( './schemas' );
+const schemas = require( './lib/schemas' );
+
+const configFileObjs = { /*
+  'filename'  : ''
+  'dir'       : '.',
+  'dot'       : true,
+  'extension' : '',
+  'content'   : {},
+*/ };
 
 ( async() => {
   const args = process.argv.slice( 2 );
   const workDir = args[ 0 ] || process.cwd();
 
-  const initOptions = await getInit( workDir );
+  const initOptions = await prompt( workDir );
 
   if ( !initOptions.eslintUseExisting ) {
     const eslintConfig = initOptions.eslintConfigType;
     initOptions.eslint = eslintOptions[ eslintConfig ].package.devDependencies;
   } else {
-    initOptions.eslint = { };
+    initOptions.eslint = eslintrcConfig( initOptions );
   }
-  const pkg = createPkgObj( initOptions );
 
-  const eslintrc = createEslintObj( initOptions );
+  const pkg = packageConfig( initOptions );
+
 } )();
