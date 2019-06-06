@@ -58,39 +58,39 @@ In the case that no rc files are found, general fallback defaults are provided.
 
 ### Package.json
 
-A series of prompts regarding field values for the generated package.json file follow.
-
-Aside from these fields, the package file contains a number of predefined properties to the `devDependencies` object.
-The majority of these modules are webpack loaders/plugins, eslint configurations/plugins, babel plugins, or are type definition modules.
-
-Detail of the provided dependencies, their version, and a brief explanation of their necessity is provided in the table below.
-
-
-| **devDependency** property assigned                | **Version** | **Purpose** |
-|----------------------------------------------------|-------------|-------------|
-| @babel/core                                        | ^7.1.5      |   *Coming Soon*          |
-| @babel/plugin-proposal-class-properties            | ^7.1.0      |   *Coming Soon*          |
-| @babel/plugin-proposal-object-rest-spread          | ^7.0.0      |   *Coming Soon*          |
-| @babel/plugin-transform-member-expression-literals | ^7.0.0      |   *Coming Soon*          |
-| @babel/plugin-transform-object-assign              | ^7.0.0      |   *Coming Soon*          |
-| @babel/plugin-transform-property-literals          | ^7.0.0      |   *Coming Soon*          |
-| @babel/preset-env                                  | ^7.1.5      |   *Coming Soon*          |
-| @google/clasp                                      | ^1.6.3      |   *Coming Soon*          |
-| @types/google-apps-script                          | ^0.0.31     |   *Coming Soon*          |
-| babel-eslint                                       | ^10.0.1     |   *Coming Soon*          |
-| babel-loader                                       | ^8.0.4      |   *Coming Soon*          |
-| babel-plugin-add-module-exports                    | ^1.0.0      |   *Coming Soon*          |
-| babel-plugin-array-includes                        | ^2.0.3      |   *Coming Soon*          |
-| clean-webpack-plugin                               | ^0.1.19     |   *Coming Soon*          |
-| copy-webpack-plugin                                | ^4.6.0      |   *Coming Soon*          |
-| eslint                                             | ^5.9.0      |   *Coming Soon*          |
-| eslint-loader                                      | ^2.1.1      |   *Coming Soon*          |
-| eslint-plugin-googleappsscript                     | ^1.0.1      |   *Coming Soon*          |
-| gas-lib                                            | ^2.0.2      |   *Coming Soon*          |
-| gas-webpack-plugin                                 | ^0.3.0      |   *Coming Soon*          |
-| uglifyjs-webpack-plugin                            | ^2.0.1      |   *Coming Soon*          |
-| webpack                                            | ^4.25.1     |   *Coming Soon*          |
-| webpack-cli                                        | ^3.1.2      |   *Coming Soon*          |
+> #### devDependencies
+> A series of prompts regarding field values for the generated package.json file follow.
+>
+> Aside from these fields, the package file contains a number of predefined properties to the **`devDependencies`** object.
+> The majority of these modules are webpack loaders/plugins, eslint configurations/plugins, babel plugins, or are type definition modules.
+>
+> Detail of the provided dependencies, their version, and a brief explanation of their necessity is provided in the table below.
+>
+> | **devDependency** property assigned                | **Version** | **Purpose**              |
+> |----------------------------------------------------|-------------|--------------------------|
+> | @babel/core                                        | ^7.1.5      |   *Coming Soon*          |
+> | @babel/plugin-proposal-class-properties            | ^7.1.0      |   *Coming Soon*          |
+> | @babel/plugin-proposal-object-rest-spread          | ^7.0.0      |   *Coming Soon*          |
+> | @babel/plugin-transform-member-expression-literals | ^7.0.0      |   *Coming Soon*          |
+> | @babel/plugin-transform-object-assign              | ^7.0.0      |   *Coming Soon*          |
+> | @babel/plugin-transform-property-literals          | ^7.0.0      |   *Coming Soon*          |
+> | @babel/preset-env                                  | ^7.1.5      |   *Coming Soon*          |
+> | @google/clasp                                      | ^1.6.3      |   *Coming Soon*          |
+> | @types/google-apps-script                          | ^0.0.31     |   *Coming Soon*          |
+> | babel-eslint                                       | ^10.0.1     |   *Coming Soon*          |
+> | babel-loader                                       | ^8.0.4      |   *Coming Soon*          |
+> | babel-plugin-add-module-exports                    | ^1.0.0      |   *Coming Soon*          |
+> | babel-plugin-array-includes                        | ^2.0.3      |   *Coming Soon*          |
+> | clean-webpack-plugin                               | ^0.1.19     |   *Coming Soon*          |
+> | copy-webpack-plugin                                | ^4.6.0      |   *Coming Soon*          |
+> | eslint                                             | ^5.9.0      |   *Coming Soon*          |
+> | eslint-loader                                      | ^2.1.1      |   *Coming Soon*          |
+> | eslint-plugin-googleappsscript                     | ^1.0.1      |   *Coming Soon*          |
+> | gas-lib                                            | ^2.0.2      |   *Coming Soon*          |
+> | gas-webpack-plugin                                 | ^0.3.0      |   *Coming Soon*          |
+> | uglifyjs-webpack-plugin                            | ^2.0.1      |   *Coming Soon*          |
+> | webpack                                            | ^4.25.1     |   *Coming Soon*          |
+> | webpack-cli                                        | ^3.1.2      |   *Coming Soon*          |
 
 <br/>
 <br/>
