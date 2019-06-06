@@ -1,5 +1,4 @@
-
-<h1 align=" center">
+<h1 align="center">
   <pre>create-gas-project</pre>
 </h1>
 
@@ -11,13 +10,43 @@
 
 <br>
 
-[![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
-[![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
-[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project)
-[![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]()
-[![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
-[![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+<p align="center">
+
+  <a href="https://www.npmjs.org/package/create-gas-project"> 
+    <img src="https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square" alt="npm License">
+  </a>
+  
+  <a href="https://www.npmjs.org/package/create-gas-project">
+    <img src="https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square" alt="npm version">
+  </a>
+  
+  <br />
+  
+  <a href="https://travis-ci.org/csmith14/create-gas-project">
+    <img src="https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square" alt="Build Status (Travis CI)">
+  </a>
+  
+  <a href="">
+    <img src="https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square" alt="Test Coverage (codecov)">
+  </a>
+  
+  <br />
+  
+  <a href="https://david-dm.org/csmith14/create-gas-project">
+    <img src="https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square" alt="David (Dependencies)">
+  </a>
+  
+  <a href="https://david-dm.org/csmith14/create-gas-project?type=dev">
+    <img src="https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square" alt="David (Dev Dependencies)">
+  </a>
+  
+  <br />
+  
+  <a href="http://standardjs.com">
+    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
+  </a>
+
+</p
 
 <br>
 
@@ -208,5 +237,3 @@ The following settings are required in the Apps Script project’s development d
 # Actions
 
 If existing files, confirm modification
-
-
