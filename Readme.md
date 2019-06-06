@@ -1,6 +1,7 @@
 
 
-#  create-gas-project -- A Google Apps Script Development & Management Assistant
+#  `create-gas-project`
+## A Google Apps Script Development & Management Assistant
 
 [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
@@ -14,7 +15,7 @@
 🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
 --
 
-## To initialize a local Apps Script Evironment:
+## To use `create-gas-project`:
 #### **⚠️ *No Install Required***
   > **`create-gas-project`** **doesn't need to be installed as a global or local module** to start configuring new projects, or even help you organize your existing projects.
 
