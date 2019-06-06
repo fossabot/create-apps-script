@@ -1,5 +1,5 @@
 {
-  "name": "create-gas-project",
+  "name": "create-apps-script",
   "version": "1.0.0",
   "description": "A tool to create a new Google Apps Script project local development project.",
   "main": "index.js",

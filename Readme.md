@@ -1,9 +1,8 @@
 
 
 #  `create-gas-project`
-## A Google Apps Script Development & Management Assistant
-
-# claim create-apps-script 
+> ## A Project-Scaffolder, Config-Contraptionator, and Dev-Tool Wrangler for Google Apps Script Development in the Modern Age
+<br>
 
 [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
@@ -12,50 +11,31 @@
 [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
 [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+<br>
 
-🚀 Create local and full-feature development environments for your Google Apps Script projects
---
+## ✔️ Create sophisticated and highly-tooled environments specially  towards developing <b>Google Apps Script</b> projects
 
-## To use `create-gas-project`:
-#### **⚠️ *No Install Required***
-  > **`create-gas-project`** **doesn't need to be installed as a global or local module** to serve its purpose. For more information, 
-
-1. **Run** the init script using your preferred package manager:
-    > *If `destination` is omitted, the default is the **current working directory***
-     - Using **npm**: **`npm init gas-project [destination]`**
-     - Using **yarn**: **`yarn create gas-project [destination]`*
-2. **Answer** the prompts to configure your development workspace.
-3. **Install** node dependencies
-#### *Setup Finished!*
-
----
+## ⭐️ Features
+- ❌ <b>Won't</b> trample existing files if passed a directory that already contains a project
+  - ✔️ <b>Will</b> compare directory configs against internal opinions prompt with suggested actions
 
 <br>
 
-# Usage
+## :construction_worker: Using `create-gas-project`
 
-## **Init A Script Project**
-**`<npm init|yarn create> gas-project [target]`**
+1. <b>Run command to `init` a new project</b>, using your package manager of choice:
+    >   - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
+    >  - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
+    ><br><br><b>Note</b> - *If <b>`destination`</b> is omitted, the <b>current working directory</b> is used as the new project's root*
+2. <b>Answer</b> the prompts and configure your development workspace.
+3. <b>Install</b> dependencies using preferred package manager
+<!-- slide -->
 
-### Arguments
-| Name | Required | Description |
-|--|--|--|
-| `target` | **No** <br> **Default** : CWD when invoked | Path on local filesystem, may be relative or absolute. If the directory does not exist, it will be created after confirmation propmt. <!-- TODO: Bypass prompt with flag --> <br> <blockquote>***Note*** - *Creating target directory is not recursive; A path with nested non-existent directories is invalid.*</blockquote> |
 
-<br/>
+<br>
 
-## CLI Prompt & Package.json Field Default Values
-#### Package manager rc files --[ `.npmrc` , `.yarnrc` ]
-The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files.
-In the scenario that rc files are found accross multiple searched directories, project-level configuration is preferred over user-level.
-Should both rc file types be located **and** both have equal preference, the user is prompted to select an rc file from a list.
+<p style="font-size: 26px;">Resulting Project Directory Tree</p>
 
-The values from the resulting rc file are parsed into JSON, and the relevant properties are supplied as default responses to following prompts
-
----
-
-# Resulting Project
-## Files & Directory Tree
 ```text
   project/
     - .babelrc
@@ -78,6 +58,32 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
       - main.js
 
 ```
+><em><small> The directory tree above represents results of an execution without modification of behaviors by arguments, options, or related prompt responses. The resulting project structure, content, and file/directory names are expected vary significantly in accordance to user input, provided options, invocation conditions, etc.</small></em>
+
+<br>
+
+---
+
+# Detailed Use Information
+##  Accepted Arguments & Available Options 🏁
+<b>`<npm init|yarn create> gas-project [target] [options]`</b>
+
+### Arguments
+| Name | Required | Description |
+|--|--|--|
+| `target` | <b>No</b> <br> <b>Default</b> : CWD when invoked | Path on local filesystem, may be relative or absolute. If the directory does not exist, it will be created after confirmation propmt. <!-- TODO: Bypass prompt with flag --> <br> <blockquote><b>*Note<b>* - *Creating target directory is not recursive; A path with nested non-existent directories is invalid.*</blockquote> |
+
+<br/>
+
+## CLI Prompt & Package.json Field Default Values
+#### Package manager rc files --[ `.npmrc` , `.yarnrc` ]
+The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files.
+In the scenario that rc files are found accross multiple searched directories, project-level configuration is preferred over user-level.
+Should both rc file types be located <b>and</b> both have equal preference, the user is prompted to select an rc file from a list.
+
+The values from the resulting rc file are parsed into JSON, and the relevant properties are supplied as default responses to following prompts
+
+--
 
 ## Environment & Configuration
 
@@ -86,12 +92,12 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 > #### devDependencies
 > A series of prompts regarding field values for the generated package.json file follow.
 >
-> Aside from these fields, the package file contains a number of predefined properties within **`devDependencies`**.
+> Aside from these fields, the package file contains a number of predefined properties within <b>`devDependencies`<b>.
 > The majority of these modules are webpack loaders/plugins, eslint configurations/plugins, babel plugins, or `@types/*` definitions.
 >
 > Detail of the provided dependencies, their version, and a brief explanation of their necessity is provided in the table below.
 >
-> | **devDependency** package                          | **Version** | **Purpose**              |
+> | <b>devDependency</b> package                          | <b>Version</b> | <b>Purpose</b>              |
 > |----------------------------------------------------|-------------|--------------------------|
 > | @babel/core                                        | ^7.1.5      |   *Coming Soon*          |
 > | @babel/plugin-proposal-class-properties            | ^7.1.0      |   *Coming Soon*          |
@@ -124,7 +130,7 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 
 In order to provide an eslint configuration file for the environment, `create-gas-project` exposes a partial eslint configuration object, containing properties and values specific to the Apps Script environment & tooling.
 
-***-- Base ESlint Configuration Object --***
+<b>*-- Base ESlint Configuration Object --<b>*
 >```JSON
 >    {
 >      "root" : true,
@@ -180,7 +186,7 @@ In order to provide a complete and valid configuration to eslint, `create-gas-pr
 
 Once confirmed to be valid, the resolved absolute path is then assigned as the value of the `"``extends``"` field for the project’s eslint configuration.
 
-**Project Eslint Configuration**
+<b>Project Eslint Configuration<b>
 The following settings are required in the Apps Script project’s development directory eslint configuration to ensure all tooling works as expected:
 
 <br>
