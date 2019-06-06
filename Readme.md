@@ -14,7 +14,9 @@
     - Using **npm**: **`npm init gas-project [destination]`**
     - Using **yarn**: **`yarn create gas-project [destination]`**
   2. **Answer** the prompts to configure your development workspace.
-  3. Then simply **install** the dependencies with: **`npm i`** / **`yarn add`** in the root of the project.
+  3. **Install** node dependencies
+
+#### *Setup Finished!*
 
   ---
 
