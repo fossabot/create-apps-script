@@ -95,7 +95,7 @@
       - main.js
 
 ```
-><em><small> The directory tree above represents results of an execution without modification of behaviors by arguments, options, or related prompt responses. The resulting project structure, content, and file/directory names are expected vary significantly in accordance to user input, provided options, invocation conditions, etc.</small></em>
+><em><small> The directory tree above represents basic results - results without modification of behavior by arguments, options, or related prompt responses.</small></em>
 
 <br>
 
