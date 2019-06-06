@@ -11,7 +11,7 @@
 [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-🚀 Dynamically and interactively create local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects.
+🚀 Create local and full-feature development environments for your Google Apps Script projects
 --
 
 ## To use `create-gas-project`:
