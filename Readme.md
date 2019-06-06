@@ -5,13 +5,13 @@
 
 [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
 [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
-[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) 
-[![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() 
+[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project)
+[![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]()
 [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
 [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
+🚀 Dynamically and interactively create local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects.
 --
 
 ## To use `create-gas-project`:
@@ -38,7 +38,7 @@
 ### Arguments
 | Name | Required | Description |
 |--|--|--|
-| `target` | **No** <br> **Default** : CWD when invoked | a relative or absolute path to an existing directory to initialize as the root of a new development environment. |
+| `target` | **No** <br> **Default** : CWD when invoked | Path on local filesystem, may be relative or absolute. If the directory does not exist, it will be created after confirmation propmt. <!-- TODO: Bypass prompt with flag --> <br> <blockquote>***Note*** - *Creating target directory is not recursive; A path with nested non-existent directories is invalid.*</blockquote> |
 
 <br/>
 
@@ -67,10 +67,10 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
      + .clasp.json
        [ ... ]
     + dist/
-      
+
     + pull/
       - [ When creating local env for existing Script Project files are pulled here using clasp ]
-      
+
     + src/
       - index.js
       - main.js
