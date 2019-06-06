@@ -11,7 +11,6 @@
 [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-
 🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
 --
 
@@ -19,11 +18,10 @@
 #### **⚠️ *No Install Required***
   > **`create-gas-project`** **doesn't need to be installed as a global or local module** to start configuring new projects, or even help you organize your existing projects.
 
-
 1. **Run** the init script using your preferred package manager:
+    > *If `destination` is omitted, the default is the **current working directory***
      - Using **npm**: **`npm init gas-project [destination]`**
-     - Using **yarn**: **`yarn create gas-project [destination]`**
-     > *If `destination` is omitted, the default is the **current working directory***
+     - Using **yarn**: **`yarn create gas-project [destination]`*
 2. **Answer** the prompts to configure your development workspace.
 3. **Install** node dependencies
 #### *Setup Finished!*
@@ -32,11 +30,7 @@
 
 <br>
 
-
-
 # Usage
-
-
 
 ## **Init A Script Project**
 **`<npm init|yarn create> gas-project [target]`**
@@ -60,7 +54,7 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 
 # Resulting Project
 ## Files & Directory Tree
-```
+```text
   project/
     - .babelrc
     - .editorconfig
@@ -69,14 +63,18 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
     - .gitignore
     - webpack.config.js
     + config/
-      appsscript.json
-      .clasp.json
-        [ ... ]
+     + appsscript.json
+     + .clasp.json
+       [ ... ]
     + dist/
-      [ if existing Script Project, files are pulled here -- else am empty dir ]
+      
+    + pull/
+      - [ When creating local env for existing Script Project files are pulled here using clasp ]
+      
     + src/
       - index.js
       - main.js
+
 ```
 
 ## Environment & Configuration
@@ -86,12 +84,12 @@ The values from the resulting rc file are parsed into JSON, and the relevant pro
 > #### devDependencies
 > A series of prompts regarding field values for the generated package.json file follow.
 >
-> Aside from these fields, the package file contains a number of predefined properties to the **`devDependencies`** object.
-> The majority of these modules are webpack loaders/plugins, eslint configurations/plugins, babel plugins, or are type definition modules.
+> Aside from these fields, the package file contains a number of predefined properties within **`devDependencies`**.
+> The majority of these modules are webpack loaders/plugins, eslint configurations/plugins, babel plugins, or `@types/*` definitions.
 >
 > Detail of the provided dependencies, their version, and a brief explanation of their necessity is provided in the table below.
 >
-> | **devDependency** property assigned                | **Version** | **Purpose**              |
+> | **devDependency** package                          | **Version** | **Purpose**              |
 > |----------------------------------------------------|-------------|--------------------------|
 > | @babel/core                                        | ^7.1.5      |   *Coming Soon*          |
 > | @babel/plugin-proposal-class-properties            | ^7.1.0      |   *Coming Soon*          |
