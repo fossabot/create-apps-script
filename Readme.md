@@ -1,11 +1,13 @@
 
-<h1 align=" center"> 
+<h1 align=" center">
   <pre>create-gas-project</pre>
 </h1>
 
-<h2 align=" center"> 
-  Project-Scaffolder<br>Config-Contraptionator<br>DevTool-Assimilator<br>Local Google Apps Script Dev-Env-Init-ifier
-</h2>
+<p align="center"><b>-</b> Project-Scaffolder <b>|</b> Config-Contraptionator <b>|</b> DevTool-Assimilator <b>-</b></p>
+<p align="center"><b>Development-Environment-Optimizer</b></p>
+<P align="center">-- for --</p>
+<h2 align="center">Google Apps Script</h2>
+</p>
 
 <br>
 
@@ -16,6 +18,7 @@
 [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
 [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 <br>
 
 ## ✔️ Create sophisticated and highly-tooled environments specially  towards developing <b>Google Apps Script</b> projects
