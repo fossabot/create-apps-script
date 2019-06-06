@@ -1,10 +1,17 @@
 
 
-#  create-gas-project :node
+#  create-gas-project -- A Google Apps Script Development & Management Assistant
 
-  [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) **|** [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
+[![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
+[![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project)
+[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) 
+[![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() 
+[![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
+[![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-  🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
+
+🚀 Deploy local development environments with tools for testing, delivery, integraion, and compiling - all specialized for use with Google Apps Script projects. 
 --
 
 ## To initialize a local Apps Script Evironment:
@@ -15,7 +22,7 @@
 1. **Run** the init script using your preferred package manager:
      - Using **npm**: **`npm init gas-project [destination]`**
      - Using **yarn**: **`yarn create gas-project [destination]`**
-     > ℹ️ *If `destination` is omitted, the default is the current directory*
+     > *If `destination` is omitted, the default is the **current working directory***
 2. **Answer** the prompts to configure your development workspace.
 3. **Install** node dependencies
 #### *Setup Finished!*
@@ -24,15 +31,6 @@
 
 <br>
 
-
-##  📋 Vitals
-[![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) ♥️ [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]() 🌡 [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project)
-
-⚙️ [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
-
-🕶 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-
-  <br>
 
 
 # Usage
