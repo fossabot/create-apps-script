@@ -4,26 +4,29 @@
    create-gas-project
   </h1>
 
-  [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]()
-
-  *A tool to initialize a local environment and configure tools to assist development of new and existing Google Apps Script projects.*
+  <span style="font-size: 2rem; color: #D60808; font-weight: 700;"> `npm init gas-project ./` <span style="color: black; opacity: 0.2">  || </span> `yarn create gas-project ./` </span>
   --
+  <br>
+  <span style="font-size: 1.75rem; font-weight: 500;">Initialize a local environment specially configured for development of a new or existing Google Apps Script project.</span>
+
+  [![npm](https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![npm](https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square)](https://www.npmjs.org/package/create-gas-project) [![Travis CI](https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square)](https://travis-ci.org/csmith14/create-gas-project) [![Codecov](https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square)]()
   [![David](https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project) [![David](https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square)](https://david-dm.org/csmith14/create-gas-project?type=dev)
   [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+  --
+  <br>
   ---
+<span style="font-size: 1.75rem">***No Install Necessary***</span>
+As an **"[init-package](https://docs.npmjs.com/cli/init) package"**, `create-gas-project` **needn't be installed**, not globally or locally, in order to carry out its **`init`-y goodness** . Nor is it behooving to list `create-gas-project` as a development dependency, since its main purpose is setting up the configurations of the modules that **will be installed** as the development dependencies.
+
+Once the project is established, `create-gas-project` simply saunters off towards the horizon, silhouetted by a setting sun.
 </div>
 <br>
 
 # Usage
 
 
-## No Installation Required :no_entry_sign:
-As an "init-package" ... well, package ... `create-gas-project` **shouldn't be installed globally or locally**. 
-Nor is it necessary to list `create-gas-project` as a development dependency, since its main purpose is setting up the configurations of the modules that **will be** the development dependencies.
 
-Once the project is established, `create-gas-project` simply saunters off towards the horizon, silhouetted by a setting sun.
-
-## **Init New Project**
+## 🚀 **Init New Project**
 **`<npm init|yarn create> gas-project [target]`**
 
 ### Arguments
@@ -35,7 +38,7 @@ Once the project is established, `create-gas-project` simply saunters off toward
 
 ## CLI Prompt & Package.json Field Default Values
 #### Package manager rc files --[ `.npmrc` , `.yarnrc` ]
-The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files. 
+The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files.
 In the scenario that rc files are found accross multiple searched directories, project-level configuration is preferred over user-level.
 Should both rc file types be located **and** both have equal preference, the user is prompted to select an rc file from a list.
 
