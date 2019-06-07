@@ -50,17 +50,17 @@
 
 <br>
 
-## ✔️ Create sophisticated and highly-tooled environments specially  towards developing <b>Google Apps Script</b> projects
+## ✅ Create sophisticated environments towards developing <b>Google Apps Script</b> projects
 
 ## ⭐️ Features
 - ❌ <b>Won't</b> trample existing files if passed a directory that already contains a project
-  - ✔️ <b>Will</b> compare directory configs against internal opinions prompt with suggested actions
+  - ✅ <b>Will</b> compare directory configs against internal opinions prompt with suggested actions
 
 <br>
 
-## Construct a New Environment :construction_worker:
+## Construct a Development Environment :construction_worker:
 
-1. <b>Run command to `init` a new project</b>, using your package manager of choice:
+1. <b>Run command</b> to `init` a new project, using your package manager of choice:
     >  - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
     >  - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
     ><br><br><b>Note</b> - *If <b>`destination`</b> is omitted, the <b>current working directory</b> is used as the new project's root*
@@ -69,8 +69,13 @@
 
 <br>
 
-Resulting Project Directory Tree
+## Project Directory, Hard Defaults
+Assuming the following conditions: 
+- Invocation where `[target]` is a path to an empty directory
+- Usage of bedrock-status, hard-coded default values for all applicable prompt answers
+- Process exit code of 0
 
+The output directory will have the following structure:
 ```text
   [target]/
     - .babelrc
@@ -93,34 +98,36 @@ Resulting Project Directory Tree
       - main.js
 
 ```
-><em><small> The directory tree above represents basic results - results without modification of behavior by arguments, options, or related prompt responses.</small></em>
+><em><small>The above tree  projects configured from </small></em>
 
 <br>
 
 ---
 
-# Detailed Use Information
+# Detailed Usage Information
 ##  Accepted Arguments & Available Options 🏁
-<b>`<npm init|yarn create> gas-project [target] [options]`</b>
 
 ### Arguments
-| Name | Required | Description |
-|--|--|--|
-| `target` | <b>No</b> <br> <b>Default</b> : CWD when invoked | Path on local filesystem, may be relative or absolute. If the directory does not exist, it will be created after confirmation propmt. <!-- TODO: Bypass prompt with flag --> <br> <blockquote><b>*Note<b>* - *Creating target directory is not recursive; A path with nested non-existent directories is invalid.*</blockquote> |
-
+| Name | Required | Default Value | Description |
+|--|--|--|--|
+| `target` | <b>No</b> | Current working directory | <p>Local path. Relative paths are resolved from the current working directory.
 <br/>
+Path's leafnode must be directory. If the leafnode does not exist, it is created. 
+<br/></p>|
 
 ## CLI Prompt & Package.json Field Default Values
-#### Package manager rc files --[ `.npmrc` , `.yarnrc` ]
-The script will search the user's home directory, as well as the `target` directory, for both `.yarnrc` and `.npmrc` files.
-In the scenario that rc files are found accross multiple searched directories, project-level configuration is preferred over user-level.
-Should both rc file types be located <b>and</b> both have equal preference, the user is prompted to select an rc file from a list.
 
-The values from the resulting rc file are parsed into JSON, and the relevant properties are supplied as default responses to following prompts
+### <b>Default Responses</b> : <small>How `.npmrc` and `.yarnrc` values are resolved</small>
+
+`create-gas-project` uses the `'rc'` package to locate, parse, and reconcile `.npmrc` / `.yarnrc` files/content. 
+  - Search paths and file-preference strategies are consistent with that of the package-manager programs themselves. 
+  - Config values are resolved according to the preference behavior of the respective package-manager. 
+
 
 --
 
-## Environment & Configuration
+# 📑
+# Detailed File Creation Information 
 
 ### Package.json
 
@@ -235,3 +242,4 @@ The following settings are required in the Apps Script project’s development d
 # Actions
 
 If existing files, confirm modification
+
