@@ -50,7 +50,7 @@
 
 <br>
 
-## ✅ Create sophisticated environments towards developing <b>Google Apps Script</b> projects
+Create a custom local Apps Script development package in seconds
 
 ## ⭐️ Features
 - ❌ <b>Won't</b> trample existing files if passed a directory that already contains a project
