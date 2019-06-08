@@ -1,11 +1,9 @@
 <h1 align="center">
-  <pre>create-gas-project</pre>
+  create-apps-script
 </h1>
 
 <p align="center"><b>-</b> Project-Scaffolder <b>|</b> Config-Contraptionator <b>|</b> DevTool-Assimilator <b>-</b></p>
-<p align="center"><b>Development-Environment-Optimizer</b></p>
-<P align="center">-- for --</p>
-<h2 align="center">Google Apps Script</h2>
+<h2 align="center">Create a Local Apps Script Development Package in Seconds</h2>
 </p>
 
 <br>
@@ -49,12 +47,18 @@
 </p>
 
 <br>
+<hr>
 
-Create a custom local Apps Script development package in seconds
 
 ## ⭐️ Features
-- ❌ <b>Won't</b> trample existing files if passed a directory that already contains a project
-  - ✅ <b>Will</b> compare directory configs against internal opinions prompt with suggested actions
+- Combines the most popular and effective development tools
+
+  🤖 Use **Babel** to write and compile modern Javascript to Google Apps Script's ECMA spec.
+
+  💬 Leverage **ESLint** to catch syntax errors and future bugs before deployment.
+
+  ☕️ Use **Mocha** to follow Test-Driven-Development practices.
+  - **Webpack** combines transpiling, minification, linting, and bundling into a single process.
 
 <br>
 
