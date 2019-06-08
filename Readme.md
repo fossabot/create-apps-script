@@ -12,36 +12,36 @@
 
 <p align="center">
 
-  <a href="https://www.npmjs.org/package/create-gas-project"> 
+  <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square" alt="npm License">
   </a>
-  
+
   <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square" alt="npm version">
   </a>
-  
+
   <br />
-  
+
   <a href="https://travis-ci.org/csmith14/create-gas-project">
     <img src="https://img.shields.io/travis/csmith14/create-gas-project.svg?style=flat-square" alt="Build Status (Travis CI)">
   </a>
-  
+
   <a href="">
     <img src="https://img.shields.io/codecov/c/github/csmith14/create-gas-project.svg?style=flat-square" alt="Test Coverage (codecov)">
   </a>
-  
+
   <br />
-  
+
   <a href="https://david-dm.org/csmith14/create-gas-project">
     <img src="https://img.shields.io/david/csmith14/create-gas-project.svg?style=flat-square" alt="David (Dependencies)">
   </a>
-  
+
   <a href="https://david-dm.org/csmith14/create-gas-project?type=dev">
     <img src="https://img.shields.io/david/dev/csmith14/create-gas-project.svg?style=flat-square" alt="David (Dev Dependencies)">
   </a>
-  
+
   <br />
-  
+
   <a href="http://standardjs.com">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
   </a>
@@ -70,9 +70,9 @@ Create a custom local Apps Script development package in seconds
 <br>
 
 ## Project Directory, Hard Defaults
-Assuming the following conditions: 
+Assuming the following conditions:
 - Invocation where `[target]` is a path to an empty directory
-- Usage of bedrock-status, hard-coded default values for all applicable prompt answers
+- Default values for all applicable prompt answers
 - Process exit code of 0
 
 The output directory will have the following structure:
@@ -85,13 +85,10 @@ The output directory will have the following structure:
     - .gitignore
     - webpack.config.js
     + config/
-     + appsscript.json
-     + .clasp.json
+     - appsscript.json
+     - .clasp.json
        [ ... ]
     + dist/
-
-    + pull/
-      - [ When creating local env for existing Script Project files are pulled here using clasp ]
 
     + src/
       - index.js
@@ -112,22 +109,22 @@ The output directory will have the following structure:
 |--|--|--|--|
 | `target` | <b>No</b> | Current working directory | <p>Local path. Relative paths are resolved from the current working directory.
 <br/>
-Path's leafnode must be directory. If the leafnode does not exist, it is created. 
+Path's leafnode must be directory. If the leafnode does not exist, it is created.
 <br/></p>|
 
 ## CLI Prompt & Package.json Field Default Values
 
 ### <b>Default Responses</b> : <small>How `.npmrc` and `.yarnrc` values are resolved</small>
 
-`create-gas-project` uses the `'rc'` package to locate, parse, and reconcile `.npmrc` / `.yarnrc` files/content. 
-  - Search paths and file-preference strategies are consistent with that of the package-manager programs themselves. 
-  - Config values are resolved according to the preference behavior of the respective package-manager. 
+`create-gas-project` uses the `'rc'` package to locate, parse, and reconcile `.npmrc` / `.yarnrc` files/content.
+  - Search paths and file-preference strategies are consistent with that of the package-manager programs themselves.
+  - Config values are resolved according to the preference behavior of the respective package-manager.
 
 
 --
 
 # 📑
-# Detailed File Creation Information 
+# Detailed File Creation Information
 
 ### Package.json
 
