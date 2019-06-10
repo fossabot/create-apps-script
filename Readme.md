@@ -110,10 +110,7 @@ The output directory will have the following structure:
 ### Arguments
 | Name | Required | Default Value | Description |
 |--|--|--|--|
-| `target` | <b>No</b> | Current working directory | <p>Local path. Relative paths are resolved from the current working directory.
-<br/>
-Path's leafnode must be directory. If the leafnode does not exist, it is created.
-<br/></p>|
+| `target` | <b>No</b> | Current working directory | <p>Directory. Relative paths are resolved from the current working directory. Will create non-existent directory (but not recursively). |
 
 ## CLI Prompt & Package.json Field Default Values
 
