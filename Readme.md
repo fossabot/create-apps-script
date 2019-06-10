@@ -10,6 +10,8 @@
 
 <p align="center">
 
+  
+
   <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square" alt="npm License">
   </a>
@@ -51,7 +53,7 @@
 
 
 ## ⭐️ Features
-- Combines the most popular and effective development tools
+- Combines the most popular and effective development tools 
 
   🤖 Use **Babel** to write and compile modern Javascript to Google Apps Script's ECMA spec.
 
@@ -65,22 +67,19 @@
 
 ## Construct a Development Environment :construction_worker:
 
-1. <b>Run command</b> to `init` a new project, using your package manager of choice:
+1. <b>Run command</b> to `init` a project:
     >  - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
     >  - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
-    ><br><br><b>Note</b> - *If <b>`destination`</b> is omitted, the <b>current working directory</b> is used as the new project's root*
+    ><br><br><b>Note</b> - *If <b>`destination`</b> default is the <b>current working directory</b>*
 2. <b>Answer</b> the prompts and configure your development workspace.
 3. <b>Install</b> dependencies using preferred package manager
 
 <br>
 
 ## Project Directory, Hard Defaults
-Assuming the following conditions:
-- Invocation where `[target]` is a path to an empty directory
-- Default values for all applicable prompt answers
-- Process exit code of 0
 
 The output directory will have the following structure:
+
 ```text
   [target]/
     - .babelrc
@@ -100,14 +99,13 @@ The output directory will have the following structure:
       - main.js
 
 ```
-><em><small>The above tree  projects configured from </small></em>
 
 <br>
 
 ---
 
 # Detailed Usage Information
-##  Accepted Arguments & Available Options 🏁
+## Arguments & Options 🏁
 
 ### Arguments
 | Name | Required | Default Value | Description |
@@ -121,9 +119,7 @@ Path's leafnode must be directory. If the leafnode does not exist, it is created
 
 ### <b>Default Responses</b> : <small>How `.npmrc` and `.yarnrc` values are resolved</small>
 
-`create-gas-project` uses the `'rc'` package to locate, parse, and reconcile `.npmrc` / `.yarnrc` files/content.
-  - Search paths and file-preference strategies are consistent with that of the package-manager programs themselves.
-  - Config values are resolved according to the preference behavior of the respective package-manager.
+This program uses the `'rc'` package internally to locate and utilize `.npmrc` / `.yarnrc` files/content at run time.
 
 
 --
