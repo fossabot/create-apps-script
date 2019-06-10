@@ -58,6 +58,7 @@
   💬 Leverage **ESLint** to catch syntax errors and future bugs before deployment.
 
   ☕️ Use **Mocha** to follow Test-Driven-Development practices.
+
   - **Webpack** combines transpiling, minification, linting, and bundling into a single process.
 
 <br>
