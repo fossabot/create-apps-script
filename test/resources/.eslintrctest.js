@@ -35,7 +35,7 @@ const defaultConfig = {
   'parser': 'babel-eslint',
   'parserOptions': {
     'sourceType': 'module'
-  }
+  },
   'plugins': [ 'googleappsscript' ],
   'root': true
 };
