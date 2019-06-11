@@ -17,6 +17,12 @@
   },
   "globals": {},
   "rules": {
-
+    "space-in-parens": [
+      "error", "always", {"exceptions": ["empty"]}
+    ],
+    "padded-blocks": "off",
+    "space-before-blocks": [
+      "error", {"functions": "always"}
+    ]
   }
 }

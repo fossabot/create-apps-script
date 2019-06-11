@@ -3,7 +3,7 @@ const homedir = require('os').homedir()
 
 const Config = require('../lib/classes/Config')
 
-const config = new Config('eslintrc')
+const config = new Config()
 const testp = path.resolve(__dirname, '../Readme.md')
 
 /* eslint-disable no-undef */
