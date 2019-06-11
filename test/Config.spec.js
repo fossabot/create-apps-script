@@ -31,7 +31,7 @@ describe(chalk.bold('Config Files Base Object Props & Methods' + '\n   ' + chalk
         else if (defKeys.length > 6) return done(Error('Too many properties'))
 
         done()
-      }) // End Has 6 Enumerable Own Propertie
+      }) // > End-Test: Has 6 Enumerable Own Propertie
 
       describe('Instance with default values', () => {
         it('Should have prop-values identical to defaults.', (done) => { // eslint-disable-line cosistent-return
@@ -45,7 +45,7 @@ describe(chalk.bold('Config Files Base Object Props & Methods' + '\n   ' + chalk
           if (nonMatches.length > 0) return done(Error(`${nonMatches.length} property values are not identical to expected.`))
 
           done()
-        }) // End: Should have prop-values identical to defaults.
+        }) // > End-Test:: Should have prop-values identical to defaults.
       }) /* Instance from {} arg */
     }) /* Default values */
 
@@ -54,7 +54,7 @@ describe(chalk.bold('Config Files Base Object Props & Methods' + '\n   ' + chalk
         if (!config.schema) return done(Error('No schema property'))
 
         done()
-      }) // End Should load the object into own property "schema"
+      }) // > End-Test: Should load the object into own property "schema"
     }) /* Schema Resolution */
   }) /* Constructor */
 }) /* Config Files Base Object Props & Methods */

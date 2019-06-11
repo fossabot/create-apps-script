@@ -1,5 +1,5 @@
 {
-  "javascript.suggest.completeJSDocs": true,
-  "flow.showStatus": true
-  // nod
+  "flow.pathToFlow": "${workspaceFolder}/node_modules/flow-bin/vendor/flow",
+  "flow.showStatus": true,
+  "javascript.suggest.completeJSDocs": true
 }

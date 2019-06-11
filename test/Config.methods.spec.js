@@ -21,7 +21,7 @@ describe('Class Methods', () => {
         }
 
         done(Error(`Method accepted provided path: ${testpath}`))
-      }) // End Should reject bad paths
+      }) // > End-Test: Should reject bad paths
 
       it('Should reject unsupported extensions', (done) => { // eslint-disable-line consistent-return
         const testpath = path.resolve(__dirname, '../Readme.md')
@@ -33,7 +33,7 @@ describe('Class Methods', () => {
         }
 
         done(Error(`Method accepted an unsupported file type: ${testpath}`))
-      }) // End Should reject unsupported extensions
+      }) // > End-Test: Should reject unsupported extensions
     }) /* Input validation */
 
     it('Should fail', (done) => { // eslint-disable-line consistent-return
@@ -46,6 +46,6 @@ describe('Class Methods', () => {
       }
 
       done(Error())
-    }) // End Should fail
+    }) // > End-Test: Should fail
   }) /* importFile */
 }) /* Class Methods */
