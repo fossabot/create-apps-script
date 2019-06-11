@@ -10,7 +10,6 @@
 
 <p align="center">
 
-  
 
   <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square" alt="npm License">
@@ -53,7 +52,7 @@
 
 
 ## ⭐️ Features
-- Combines the most popular and effective development tools 
+- Combines the most popular and effective development tools
 
   🤖 Use **Babel** to write and compile modern Javascript to Google Apps Script's ECMA spec.
 

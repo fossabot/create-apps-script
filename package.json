@@ -9,7 +9,8 @@
   "private": false,
   "bin": "index.js",
   "scripts": {
-    "prestart": "yarn run flow-remove-types src/ -d lib/"
+    "prestart": "yarn run flow-remove-types src/ -d lib/",
+    "test": "mocha ./test"
   },
   "dependencies": {
     "ajv": "^6.10.0",
@@ -36,6 +37,7 @@
     "flow-typed": "^2.5.2",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
     "q-i": "^2.0.1"
   }
 }

@@ -1,3 +1,5 @@
 {
-
+  "javascript.suggest.completeJSDocs": true,
+  "flow.showStatus": true
+  // nod
 }
