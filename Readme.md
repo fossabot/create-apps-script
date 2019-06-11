@@ -1,3 +1,7 @@
+---
+
+---
+<!-- markdownlint-disable MD013 -->
 <h1 align="center">
   create-apps-script
 </h1>
@@ -9,8 +13,6 @@
 <br>
 
 <p align="center">
-
-
   <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/l/create-gas-project.svg?style=flat-square" alt="npm License">
   </a>
@@ -44,14 +46,16 @@
   <a href="http://standardjs.com">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
   </a>
-
+<!-- mardkownlint-endable MD013 -->
 </p>
 
 <br>
 <hr>
 
+# Overview
 
-## ⭐️ Features
+## Features
+
 - Combines the most popular and effective development tools
 
   🤖 Use **Babel** to write and compile modern Javascript to Google Apps Script's ECMA spec.

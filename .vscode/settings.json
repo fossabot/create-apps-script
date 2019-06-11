@@ -1,5 +1,6 @@
 {
   "flow.pathToFlow": "${workspaceFolder}/node_modules/flow-bin/vendor/flow",
   "flow.showStatus": true,
-  "javascript.suggest.completeJSDocs": true
+  "javascript.suggest.completeJSDocs": true,
+  "markdown.previewFrontMatter": "show"
 }
