@@ -1,14 +1,9 @@
+const assert = require( 'assert' )
 const chalk = require( 'chalk' )
+const Config = require( '../src/lib/classes/Config' )
 
-/* DEFINE LOGGING LEVEL */
-process.env.LOG_LEVEL = 1
-
-const Config = require( '../lib/classes/Config' )
-const ConfigDefault = require( './resources/Config-defaults-obj' )
-
-/* eslint-disable no-undef */
-describe( chalk.bold( 'Config Files Base Object Props & Methods' + '\n   ' + chalk.yellow( ( '──' ).repeat( 14 ) ) + '\n' ), () => {
-  const testConfigDescriptor = {
+describe( 'Config Class', () => {
+  const testArgument = {
     'dir': '.',
     'dot': false,
     'extension': 'json',
@@ -16,45 +11,33 @@ describe( chalk.bold( 'Config Files Base Object Props & Methods' + '\n   ' + cha
   }
 
   /** @type {Config} The master Config instance   */
-  const config = new Config( testConfigDescriptor )
+  const config = new Config( testArgument )
 
   describe( 'Config Class', () => {
 
     describe( 'Constructor', () => {
 
       describe( 'Default values', () => {
-
+        /* eslint-disable camelcase */
         /** @type {Config} The instance to test default value assignment */
-        // eslint-disable-next-line camelcase
-        const testInstance_defaults = new Config( {} )
+        const defaultInstance = new Config( {} )
+        const defaultInstance_keys = Object.keys( defaultInstance )
+        /* eslint-enable camelcase */
 
-        const defKeys = Object.keys( testInstance_defaults )
+        it( 'Should have prop-values identical to defaults', ( done ) => { // eslint-disable-line cosistent-return
+          const nonMatches = defaultInstance_keys.map( key => {
+            return ( ( String( ConfigDefault[ key ] ) === String( defaultInstance[ key ] ) ) )
+          } ).map( ( v, i ) => {
+            /* Replace any non-matches with the key label */
+            return !v ? defaultInstance_keys[ i ] : null
+          } ).filter( v => v ) /* Then simply remove null values */
 
-        it( 'Has Exactly 6 Enumerable-Own-Properties', ( done ) => { // eslint-disable-line consistent-return
-          if ( defKeys.length < 6 ) return done( Error( 'Too few properties' ) )
-          else if ( defKeys.length > 6 ) return done( Error( 'Too many properties' ) )
+          if ( nonMatches.length > 0 ) return done( Error( `${nonMatches.length} property values are not identical to expected.` ) )
 
           done()
-        } ) // End-Test: Has 6 Enumerable Own Properties |>
+        } ) // End-Test: Should have prop-values identical to defaults |>
 
-        describe( 'Instance with default values', () => {
-
-          it( 'Should have prop-values identical to defaults', ( done ) => { // eslint-disable-line cosistent-return
-            const nonMatches = defKeys.map( key => {
-              return ( ( String( ConfigDefault[ key ] ) === String( testInstance_defaults[ key ] ) ) )
-            } ).map( ( v, i ) => {
-            /* Replace any non-matches with the key label */
-              return !v ? defKeys[ i ] : null
-            } ).filter( v => v ) /* Then simply remove null values */
-
-            if ( nonMatches.length > 0 ) return done( Error( `${nonMatches.length} property values are not identical to expected.` ) )
-
-            done()
-          } ) // End-Test: Should have prop-values identical to defaults |>
-
-        } ) // End-Suite: Instance from {} arg ||
-
-      } ) /* End-Suite: Default values */
+      } ) // End-Suite: Default values ||
 
       describe( 'Schema Resolution', () => {
 

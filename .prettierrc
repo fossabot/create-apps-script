@@ -1,16 +1,16 @@
 {
   "arrowParens"   : "avoid",
-  "bracketSpacing": false,
   "endOfLine"     : "lf",
-  "insertPragma"  : true,
   "parser"        : "babel-flow",
-  "printWidth"    : 80,
   "proseWrap"     : "always",
   "quoteProps"    : "preserve",
+  "trailingComma" : "none",
+  "printWidth"    : 80,
+  "tabWidth"      : 2,
+  "bracketSpacing": false,
+  "insertPragma"  : true,
   "requirePragma" : true,
   "semi"          : false,
   "singleQuote"   : true,
-  "tabWidth"      : 2,
-  "trailingComma" : "none",
   "useTabs"       : false
 }

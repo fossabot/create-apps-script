@@ -1,12 +1,15 @@
-const Config = require('../../lib/classes/Config')
+const Config = require( '../../src/lib/classes/Config' )
 const {
   print
 } = require( 'q-i' )
 
+/* Some default property settings */
 const enumerable = true
 const configurable = true
 const value = true
-const globalsPropDescriptor = () => {
+
+/* And a handy factory */
+const globalDescriptor = () => {
   const desc = Object.create( {} )
   Object.assign( desc, {
     enumerable,
@@ -16,21 +19,60 @@ const globalsPropDescriptor = () => {
   return desc
 }
 
-const reduceFn = ( prev, curr ) => {
-  return Object.assign( prev, {
-    [ curr ]: globalsPropDescriptor()
-  } )
-}
+const gSuiteSymbols = [
+  // 'Calendar'
+  'CalendarApp',
+  'CardService',
+  'Charts',
+  'ContactsApp',
+  'DataStudioApp',
+  'DocumentApp',
+  // 'Drive',
+  'DriveApp',
+  'FirebaseApp',
+  'FormApp',
+  // 'Gmail',
+  'GmailApp',
+  'GroupsApp',
+  // 'HtmlService',
+  'LanguageApp',
+  'MailApp',
+  'Maps',
+  // 'OAuth1',
+  // 'OAuth2',
+  // 'PropertiesService',
+  'SitesApp',
+  // 'Slides',
+  'SlidesApp',
+  'SpreadsheetApp'
+]
+
+const utilSymbols = [
+  'Calendar'
+  'Drive',
+  'Gmail',
+  'HtmlService',
+  'OAuth1',
+  'OAuth2',
+  'PropertiesService',
+  'Slides',
+]
 
 const globalSymbols = [
   'Calendar', 'CalendarApp', 'CardService', 'Charts', 'ContactsApp', 'DataStudioApp', 'DocumentApp', 'Drive', 'DriveApp', 'FirebaseApp', 'FormApp', 'Gmail', 'GmailApp', 'GroupsApp', 'HtmlService', 'LanguageApp', 'MailApp', 'Maps', 'OAuth1', 'OAuth2', 'PropertiesService', 'SitesApp', 'Slides', 'SlidesApp', 'SpreadsheetApp'
 ]
 
+const reducer = ( prev, curr ) => {
+  return Object.assign( prev, {
+    [ curr ]: globalDescriptor()
+  } )
+}
+
 const globals = Object.defineProperties(
   Object.create( null ),
   Object.assign( {},
-    globalSymbols.reduce( ( p, c ) => reduceFn( p, c ),
-      Object.create( {} ) /* <== Initial value */
+    globalSymbols.reduce( ( p, c ) => reducer( p, c ),
+      Object.create( {} )
     )
   )
 )
@@ -55,6 +97,10 @@ const config = {
   'extends': '',
   'root': true
 };
+
+function Eslint() {
+
+}
 
 // globals.
 

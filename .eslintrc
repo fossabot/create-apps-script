@@ -5,7 +5,8 @@
     "import",
     "standard",
     "node",
-    "promise"
+    "promise",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -15,6 +16,17 @@
     "node": true,
     "amd": true
   },
+  "overrides": [ {
+      "files":["test/**"],
+      "globals": {
+        "describe": true,
+        "it": true,
+        "before": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "after":true
+      }
+  } ],
   "globals": {},
   "rules": {
     "space-in-parens": [
