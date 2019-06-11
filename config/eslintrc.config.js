@@ -14,7 +14,7 @@ let config = {};
  * Modifies the imported eslintrc config object with rules specialized for GAS development
  */
 function modifyConfig() {
-  Object.keys( defaultConfig ).forEach( ( key ) => {
+  Object.keys( config ).forEach( ( key ) => {
     if ( key === 'extends' ) {
       /* Don't overwrite the user's existing base config */
       return;
@@ -23,14 +23,14 @@ function modifyConfig() {
     if ( key === 'plugins' ) {
       if ( config[ key ] instanceof Array ) {
         /* Only add to the existing plugin array - don't overwrite it */
-        config[ key ] = config[ key ].concat( defaultConfig[ key ] );
-      } else config[ key ] = defaultConfig[ key ]; /* Unless there isn't one */
+        config[ key ] = config[ key ].concat( config[ key ] );
+      } else config[ key ] = config[ key ]; /* Unless there isn't one */
 
       return;
     }
 
     /* Overwrite */
-    config[ key ] = defaultConfig[ key ];
+    config[ key ] = config[ key ];
   } );
 }
 
@@ -53,7 +53,7 @@ function useExistingEslintObj( filePath, modify ) {
  * @returns
  */
 function createNewEslintObj( extendsConfig ) {
-  config = defaultConfig;
+  config = config;
 
   const configType = extendsConfig;
   config.extends = configType;
