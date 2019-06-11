@@ -1,0 +1,16 @@
+{
+  "arrowParens"   : "avoid",
+  "bracketSpacing": false,
+  "endOfLine"     : "lf",
+  "insertPragma"  : true,
+  "parser"        : "babel-flow",
+  "printWidth"    : 80,
+  "proseWrap"     : "always",
+  "quoteProps"    : "preserve",
+  "requirePragma" : true,
+  "semi"          : false,
+  "singleQuote"   : true,
+  "tabWidth"      : 2,
+  "trailingComma" : "none",
+  "useTabs"       : false
+}
