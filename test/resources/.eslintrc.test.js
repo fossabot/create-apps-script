@@ -1,7 +1,5 @@
 const Config = require( '../../src/lib/classes/Config' )
-const {
-  print
-} = require( 'q-i' )
+const { print } = require( 'q-i' )
 
 /* Some default property settings */
 const enumerable = true

@@ -17,7 +17,9 @@
 const path = require( 'path' )
 const fs = require( 'fs' )
 //  ──────────────────────────────────────────────────
-const ajv = new ( require( 'ajv' ) )()
+const ajv = new ( require( 'ajv' ) )( {
+  "r"
+})
 // ──────────────────────────────────────────────────
 
 /** @type {Schemas} */

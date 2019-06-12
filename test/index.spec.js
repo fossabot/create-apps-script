@@ -1,4 +1,9 @@
 const configSuites = {
   'base': require( './Config.spec' ),
-  'methods': require( './Config.methods.spec' )
 }
+
+describe( 'All Tests', () => {
+
+  configSuites.base()
+
+} ); // End-Suite: All Tests ||
