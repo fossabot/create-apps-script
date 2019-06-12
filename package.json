@@ -10,7 +10,8 @@
 	"bin": "index.js",
 	"scripts": {
 		"test": "xo && ava ./test",
-		"lint:md": "markdownlint --config ./config/.markdownlint.yml --ignore node_modules **/*.md"
+		"lint:md": "markdownlint --config ./config/.markdownlint.yml --ignore node_modules **/*.md",
+		"commit": "git add -A && git-cz -a"
 	},
 	"config": {
 		"commitizen": {
@@ -29,15 +30,41 @@
 	},
 	"devDependencies": {
 		"ava": "^2.1.0",
+		"ava-spec": "^1.1.1",
 		"babel": "^6.23.0",
 		"babel-cli": "^6.26.0",
 		"commitizen": "^3.1.1",
 		"cz-conventional-changelog": "^2.1.0",
+		"eslint-config-xo-tweak": "^1.0.1",
 		"markdownlint": "^0.15.0",
 		"markdownlint-cli": "^0.16.0",
 		"nyc": "^14.1.1",
 		"q-i": "^2.0.1",
 		"release-it": "^12.3.0",
 		"xo": "^0.24.0"
+	},
+	"xo": {
+		"env": {
+			"node": true,
+			"amd": true
+		},
+		"rules": {
+			"valid-jsdoc": "off",
+			"require-jsdoc": "off",
+			"space-in-parens": [ "error", "always", {
+				"exceptions": [ "empty" ]
+			} ],
+			"padded-blocks": "off",
+			"space-before-blocks": [ "error", {
+				"functions": "always"
+			} ],
+			"indent": [ "error", "tab" ]
+		},
+		"overrides": [ {
+			"files": "./test/**",
+			"rules": {
+				"max-nested-callbacks": "off"
+			}
+		} ]
 	}
 }
