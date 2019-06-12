@@ -11,7 +11,7 @@ const configPrototype = {
    * @returns {Promise<void>} Promise */
   writeFile () {
     return new Promise( (resolve, reject) => {
-      fs.writeFile( this.path, this.toString(), {
+      fs.writeFile( this.path, this.stringify(), {
         'encoding': 'utf8'
       }, ( err ) => {
           if ( err ) reject( err )
@@ -20,7 +20,7 @@ const configPrototype = {
     } );
   },
 
-  toString () {
+  stringify () {
     return JSON.stringify( this.content )
   },
 
@@ -39,10 +39,7 @@ const configPrototype = {
   }
 }
 
-/**
- * @class Config
- *
- */
+/** @class Config */
 function Config ( {
   dir = '.',
   dot = false,

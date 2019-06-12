@@ -20,42 +20,30 @@ const globalDescriptor = () => {
 }
 
 const gSuiteSymbols = [
-  // 'Calendar'
   'CalendarApp',
   'CardService',
   'Charts',
   'ContactsApp',
   'DataStudioApp',
   'DocumentApp',
-  // 'Drive',
   'DriveApp',
   'FirebaseApp',
   'FormApp',
-  // 'Gmail',
   'GmailApp',
   'GroupsApp',
-  // 'HtmlService',
   'LanguageApp',
   'MailApp',
   'Maps',
-  // 'OAuth1',
-  // 'OAuth2',
-  // 'PropertiesService',
   'SitesApp',
-  // 'Slides',
   'SlidesApp',
   'SpreadsheetApp'
 ]
 
 const utilSymbols = [
-  'Calendar'
-  'Drive',
-  'Gmail',
   'HtmlService',
   'OAuth1',
   'OAuth2',
   'PropertiesService',
-  'Slides',
 ]
 
 const globalSymbols = [
@@ -74,8 +62,7 @@ const globals = Object.defineProperties(
     globalSymbols.reduce( ( p, c ) => reducer( p, c ),
       Object.create( {} )
     )
-  )
-)
+      ) )
 
 const env = Object.freeze( {
   'amd': true,

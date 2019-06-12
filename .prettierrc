@@ -3,7 +3,6 @@
   "endOfLine"     : "lf",
   "parser"        : "babel-flow",
   "proseWrap"     : "always",
-  "quoteProps"    : "preserve",
   "trailingComma" : "none",
   "printWidth"    : 80,
   "tabWidth"      : 2,
