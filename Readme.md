@@ -1,7 +1,6 @@
 ---
 
 ---
-<!-- markdownlint-disable MD013 -->
 <h1 align="center">
   create-apps-script
 </h1>
@@ -46,6 +45,8 @@
   <a href="http://standardjs.com">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
   </a>
+
+		[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 <!-- mardkownlint-endable MD013 -->
 </p>
 

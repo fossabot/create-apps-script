@@ -1,9 +1,14 @@
 {
-  "flow.pathToFlow": "${workspaceFolder}/node_modules/flow-bin/vendor/flow",
-  "flow.showStatus": true,
-  "javascript.suggest.completeJSDocs": true,
-  "markdown.previewFrontMatter": "show",
-  "json.schemas": [
+	"javascript.suggest.completeJSDocs": true,
+	"markdownlint.config": {
+		"extends": "./desktop/create-gas-project/config/.markdownlint.yml"
+	},
+	"markdown.previewFrontMatter": "show",
+	"json.schemas": [
 
-  ]
+	],
+	"xo.format.enable": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"eslint.enable": false
 }

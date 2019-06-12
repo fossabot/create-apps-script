@@ -12,72 +12,75 @@
 @prop {Function} [set]
 */
 
-const path = require( 'path' )
-const fs = require( 'fs' )
+const path = require('path');
+const fs = require('fs');
 
-const chalk = require( 'chalk' )
-const { print } = require( 'q-i' )
+const chalk = require('chalk');
+const {print} = require('q-i');
 
-const Schemas = require( '../../schemas' )
+const Schemas = require('../../schemas');
 
 const configPrototype = {
-  content: {},
+	content: {},
 
-  /** Writes the data/Object stored in `content` to a file at `path`
+	/** Writes the data/Object stored in `content` to a file at `path`
    * @returns {Promise<void>} Promise */
-  writeFile() {
-    return new Promise( ( resolve, reject ) => {
-      fs.writeFile( this.path, this.stringify(), { encoding: 'utf8' },
-        err => err ? reject( err ) : resolve()
-      )
-    } )
-  },
+	writeFile() {
+		return new Promise((resolve, reject) => {
+			fs.writeFile(this.path, this.stringify(), {encoding: 'utf8'},
+				err => err ? reject(err) : resolve()
+			);
+		});
+	},
 
-  stringify() {
-    return JSON.stringify( this.content )
-  },
+	stringify() {
+		return JSON.stringify(this.content);
+	},
 
-  /** @param {string} [key] OPTIONAL - A property key within `this.content` */
-  print( key = null ) {
-    if ( key ) {
-      print( this.content[ key ] )
-    } else print( this.content )
-  },
+	/** @param {string} [key] OPTIONAL - A property key within `this.content` */
+	print(key = null) {
+		if (key) {
+			print(this.content[key]);
+		} else {
+			print(this.content);
+		}
+	},
 
-  /** @param {string} [key] OPTIONAL - An individual value to inspect */
-  info( key = null ) {
-    if ( key ) {
-      print( this[ key ] )
-    } else print( this )
-  }
-}
+	/** @param {string} [key] OPTIONAL - An individual value to inspect */
+	info(key = null) {
+		if (key) {
+			print(this[key]);
+		} else {
+			print(this);
+		}
+	}
+};
 
 /* Assign new property */
 const prop = /**
 @param {any} value
 @param {PropertyDescriptor} [obj] Optionally include other descriptor properties, which will overwrite defaults
 @returns {PropertyDescriptor}
-*/ ( value, obj ) => {
-    if ( typeof value !== 'boolean' && !value ) {
-      throw TypeError( `Invalid Argument for Property Value: ${value}` ) // > Verify {value} != null or undefined -
-    }
+*/ (value, obj) => {
+		if (typeof value !== 'boolean' && !value) {
+			throw new TypeError(`Invalid Argument for Property Value: ${value}`); // > Verify {value} != null or undefined -
+		}
 
-    return Object.assign( {
-      'configurable': false,
-      'enumerable': false,
-      value,
-    }, obj )
-  }
+		return Object.assign({
+			configurable: false,
+			enumerable: false,
+			value
+		}, obj);
+	};
 
 const accessor = /**
 Create a property descriptor for a **new getter and/or setter**
 @param {PropertyDescriptor} obj An object with a `get` and/or `set` method. May include other properties as well.
 @returns {PropertyDescriptor}
-*/ obj => Object.assign( {
-    'configurable': false,
-    'enumerable': false
-  }, obj )
-
+*/ obj => Object.assign({
+		configurable: false,
+		enumerable: false
+	}, obj);
 
 /**
 @class
@@ -87,59 +90,58 @@ Create a property descriptor for a **new getter and/or setter**
 */
 
 /** @constructs */
-const Config = function ( { dir = '.', dot = false, extension = 'json', name = 'default-name' } = {} ) {
-  const configInstance = {}
-  Object.setPrototypeOf( configInstance, configPrototype )
+const Config = function ({dir = '.', dot = false, extension = 'json', name = 'default-name'} = {}) {
+	const configInstance = {};
+	Object.setPrototypeOf(configInstance, configPrototype);
 
-  /* Configure properties describing instance's basic information */
-  Object.defineProperties( configInstance,
-    /** @lends Config.prototype  */
-    {
-      /** @member {string} root */
-      'root': /* Project root */
-        prop( process.env.target, {
-          writable: false
-        } ),
+	/* Configure properties describing instance's basic information */
+	Object.defineProperties(configInstance,
+		/** @lends Config.prototype  */
+		{
+			/** @member {string} root */
+			root: /* Project root */
+        prop(process.env.target, {
+        	writable: false
+        }),
 
-      'dir': /* File path relative to `root` */
-        prop( dir ),
+			dir: /* File path relative to `root` */
+        prop(dir),
 
-      'name': /* File name (e.g., 'eslintrc', 'package', ...) */
-        prop( name ),
+			name: /* File name (e.g., 'eslintrc', 'package', ...) */
+        prop(name),
 
-      'extension': /* File extension */
-        prop( extension ),
+			extension: /* File extension */
+        prop(extension),
 
-      'filename': /* getter for the full filename */
-        accessor( {
-          /** @this Config  */
-          get() {
-            return (
-              ( this.dot ? '.' : '' ) +
+			filename: /* Getter for the full filename */
+        accessor({
+        	/** @this Config  */
+        	get() {
+        		return (
+        			(this.dot ? '.' : '') +
               this.name +
-              ( this.extension && this.extension.length ? '.' + this.extension : '' )
-            )
-          }
-        } ),
+              (this.extension && this.extension.length ? '.' + this.extension : '')
+        		);
+        	}
+        }),
 
-      'path': /* getter for the full absolute path */
-        accessor( {
-          get() {
-            return path.resolve( this.root, this.dir, this.filename )
-          }
-        } ),
+			path: /* Getter for the full absolute path */
+        accessor({
+        	get() {
+        		return path.resolve(this.root, this.dir, this.filename);
+        	}
+        })
 
-    } )
+		});
 
-  Object.defineProperty( configInstance, 'validate', {
-    'configurable': false,
-    'enumerable': false,
-    'value': Schemas[ configInstance.filename ].validator,
-  } )
+	Object.defineProperty(configInstance, 'validate', {
+		configurable: false,
+		enumerable: false,
+		value: Schemas[configInstance.filename].validator
+	});
 
-  return configInstance
-}
-
+	return configInstance;
+};
 
 // ANCHOR module.exports
-module.exports = Config
+module.exports = Config;
