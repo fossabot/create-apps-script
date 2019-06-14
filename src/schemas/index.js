@@ -16,7 +16,11 @@
 const path = require('path');
 const fs = require('fs');
 //  ──────────────────────────────────────────────────
+<<<<<<< HEAD
 const ajv = new (require('ajv'))();
+=======
+const ajv = new ( require( 'ajv' ) )()
+>>>>>>> parent of 744c4f5... Testing dependencies
 // ──────────────────────────────────────────────────
 
 /** @type {Schemas} */

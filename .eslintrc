@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "extends": [
+    "standard",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "standard",
+    "node",
+    "promise",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "amd": true
+  },
+  "overrides": [
+    {
+      "files": [
+        "test/**"
+      ],
+      "globals": {
+        "describe": true,
+        "it": true,
+        "before": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "after": true
+      }
+    }
+  ],
+  "globals": {},
+  "rules": {
+    "prettier/prettier": "error",
+    "space-in-parens": [
+      "error",
+      "always",
+      {
+        "exceptions": [
+          "empty"
+        ]
+      }
+    ],
+    "padded-blocks": "off",
+    "space-before-blocks": [
+      "error",
+      {
+        "functions": "always"
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ]
+  }
+}

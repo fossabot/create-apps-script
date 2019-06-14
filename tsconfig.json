@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"diagnostics": true,
+		// "forceConsistentCasingInFileNames": true,
+		"listEmittedFiles": true,
+		"module": "none",
+		"moduleResolution": "node",
+		"outDir": "../src",
+		"downlevelIteration": true,
+		"target": "es3",
+		"rootDir": "../srcts"
+	},
+	"include": [
+		"srcts/**.ts",
+		"srcts/**.json"
+	]
+}

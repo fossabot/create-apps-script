@@ -1,0 +1,12 @@
+{
+	"semi": false,
+	"bracketSpacing": true,
+	"arrowParens": "avoid",
+	"printWidth": 100,
+	"useTabs": true,
+	"quoteProps": "consistent",
+	"plugins": [
+		"standard"
+	],
+	"singleQuote": true
+}
