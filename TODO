@@ -1,0 +1,7 @@
+Todo:
+  ESlint Configuration:
+    ☐ ~Finish symbol names of Apps Script global classes/objects~
+    ☐ Create eslint-config-* packages:
+      ☐ Base globals (G-Suite services)
+      ☐ API Symbols
+      ☐ Utility symbols

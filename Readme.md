@@ -1,6 +1,6 @@
 ---
-
 ---
+
 <h1 align="center">
   create-apps-script
 </h1>
@@ -46,11 +46,13 @@
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard Code Style">
   </a>
 
-		[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+    	[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 <!-- mardkownlint-endable MD013 -->
 </p>
 
 <br>
+
 <hr>
 
 # Overview
@@ -72,9 +74,9 @@
 ## Construct a Development Environment :construction_worker:
 
 1. <b>Run command</b> to `init` a project:
-    >  - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
-    >  - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
-    ><br><br><b>Note</b> - *If <b>`destination`</b> default is the <b>current working directory</b>*
+   > - <b>npm</b>: <b>`npm init gas-project [destination] [options]`</b>
+   > - <b>yarn</b>: <b>`yarn create gas-project [destination] [options]`</b>
+   >   <br><br><b>Note</b> - _If <b>`destination`</b> default is the <b>current working directory</b>_
 2. <b>Answer</b> the prompts and configure your development workspace.
 3. <b>Install</b> dependencies using preferred package manager
 
@@ -101,19 +103,20 @@ The output directory will have the following structure:
     + src/
       - index.js
       - main.js
-
 ```
 
 <br>
 
----
+* * *
 
 # Detailed Usage Information
+
 ## Arguments & Options 🏁
 
 ### Arguments
-| Name | Required | Default Value | Description |
-|--|--|--|--|
+
+| Name     | Required  | Default Value             | Description                                                                                                                             |
+| -------- | --------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` | <b>No</b> | Current working directory | <p>Directory. Relative paths are resolved from the current working directory. Will create non-existent directory (but not recursively). |
 
 ## CLI Prompt & Package.json Field Default Values
@@ -122,15 +125,16 @@ The output directory will have the following structure:
 
 This program uses the `'rc'` package internally to locate and utilize `.npmrc` / `.yarnrc` files/content at run time.
 
-
---
+\--
 
 # 📑
+
 # Detailed File Creation Information
 
 ### Package.json
 
 > #### devDependencies
+>
 > A series of prompts regarding field values for the generated package.json file follow.
 >
 > Aside from these fields, the package file contains a number of predefined properties within <b>`devDependencies`<b>.
@@ -138,31 +142,31 @@ This program uses the `'rc'` package internally to locate and utilize `.npmrc` /
 >
 > Detail of the provided dependencies, their version, and a brief explanation of their necessity is provided in the table below.
 >
-> | <b>devDependency</b> package                          | <b>Version</b> | <b>Purpose</b>              |
-> |----------------------------------------------------|-------------|--------------------------|
-> | @babel/core                                        | ^7.1.5      |   *Coming Soon*          |
-> | @babel/plugin-proposal-class-properties            | ^7.1.0      |   *Coming Soon*          |
-> | @babel/plugin-proposal-object-rest-spread          | ^7.0.0      |   *Coming Soon*          |
-> | @babel/plugin-transform-member-expression-literals | ^7.0.0      |   *Coming Soon*          |
-> | @babel/plugin-transform-object-assign              | ^7.0.0      |   *Coming Soon*          |
-> | @babel/plugin-transform-property-literals          | ^7.0.0      |   *Coming Soon*          |
-> | @babel/preset-env                                  | ^7.1.5      |   *Coming Soon*          |
-> | @google/clasp                                      | ^1.6.3      |   *Coming Soon*          |
-> | @types/google-apps-script                          | ^0.0.31     |   *Coming Soon*          |
-> | babel-eslint                                       | ^10.0.1     |   *Coming Soon*          |
-> | babel-loader                                       | ^8.0.4      |   *Coming Soon*          |
-> | babel-plugin-add-module-exports                    | ^1.0.0      |   *Coming Soon*          |
-> | babel-plugin-array-includes                        | ^2.0.3      |   *Coming Soon*          |
-> | clean-webpack-plugin                               | ^0.1.19     |   *Coming Soon*          |
-> | copy-webpack-plugin                                | ^4.6.0      |   *Coming Soon*          |
-> | eslint                                             | ^5.9.0      |   *Coming Soon*          |
-> | eslint-loader                                      | ^2.1.1      |   *Coming Soon*          |
-> | eslint-plugin-googleappsscript                     | ^1.0.1      |   *Coming Soon*          |
-> | gas-lib                                            | ^2.0.2      |   *Coming Soon*          |
-> | gas-webpack-plugin                                 | ^0.3.0      |   *Coming Soon*          |
-> | uglifyjs-webpack-plugin                            | ^2.0.1      |   *Coming Soon*          |
-> | webpack                                            | ^4.25.1     |   *Coming Soon*          |
-> | webpack-cli                                        | ^3.1.2      |   *Coming Soon*          |
+> | <b>devDependency</b> package                       | <b>Version</b> | <b>Purpose</b> |
+> | -------------------------------------------------- | -------------- | -------------- |
+> | @babel/core                                        | ^7.1.5         | _Coming Soon_  |
+> | @babel/plugin-proposal-class-properties            | ^7.1.0         | _Coming Soon_  |
+> | @babel/plugin-proposal-object-rest-spread          | ^7.0.0         | _Coming Soon_  |
+> | @babel/plugin-transform-member-expression-literals | ^7.0.0         | _Coming Soon_  |
+> | @babel/plugin-transform-object-assign              | ^7.0.0         | _Coming Soon_  |
+> | @babel/plugin-transform-property-literals          | ^7.0.0         | _Coming Soon_  |
+> | @babel/preset-env                                  | ^7.1.5         | _Coming Soon_  |
+> | @google/clasp                                      | ^1.6.3         | _Coming Soon_  |
+> | @types/google-apps-script                          | ^0.0.31        | _Coming Soon_  |
+> | babel-eslint                                       | ^10.0.1        | _Coming Soon_  |
+> | babel-loader                                       | ^8.0.4         | _Coming Soon_  |
+> | babel-plugin-add-module-exports                    | ^1.0.0         | _Coming Soon_  |
+> | babel-plugin-array-includes                        | ^2.0.3         | _Coming Soon_  |
+> | clean-webpack-plugin                               | ^0.1.19        | _Coming Soon_  |
+> | copy-webpack-plugin                                | ^4.6.0         | _Coming Soon_  |
+> | eslint                                             | ^5.9.0         | _Coming Soon_  |
+> | eslint-loader                                      | ^2.1.1         | _Coming Soon_  |
+> | eslint-plugin-googleappsscript                     | ^1.0.1         | _Coming Soon_  |
+> | gas-lib                                            | ^2.0.2         | _Coming Soon_  |
+> | gas-webpack-plugin                                 | ^0.3.0         | _Coming Soon_  |
+> | uglifyjs-webpack-plugin                            | ^2.0.1         | _Coming Soon_  |
+> | webpack                                            | ^4.25.1        | _Coming Soon_  |
+> | webpack-cli                                        | ^3.1.2         | _Coming Soon_  |
 
 <br/>
 <br/>
@@ -171,8 +175,9 @@ This program uses the `'rc'` package internally to locate and utilize `.npmrc` /
 
 In order to provide an eslint configuration file for the environment, `create-gas-project` exposes a partial eslint configuration object, containing properties and values specific to the Apps Script environment & tooling.
 
-<b>*-- Base ESlint Configuration Object --<b>*
->```JSON
+<b>_-- Base ESlint Configuration Object --<b>_
+
+> ```JSON
 >    {
 >      "root" : true,
 >      "plugins": [
@@ -213,25 +218,21 @@ In order to provide an eslint configuration file for the environment, `create-ga
 >        "sourceType" : "module"
 >      }
 >    }
->```
+> ```
 
 In order to provide a complete and valid configuration to eslint, `create-gas-project` then adds an `extends` property to the object and prompts the user to select a value from the following:
+
 - 'eslint:recommended' (default)
 - 'standard'
 - 'airbnb-base'
 - A file system path to another configuration file
 
-
-
-
-
-Once confirmed to be valid, the resolved absolute path is then assigned as the value of the `"``extends``"` field for the project’s eslint configuration.
+Once confirmed to be valid, the resolved absolute path is then assigned as the value of the ```"``extends``"``` field for the project’s eslint configuration.
 
 <b>Project Eslint Configuration<b>
 The following settings are required in the Apps Script project’s development directory eslint configuration to ensure all tooling works as expected:
 
 <br>
-
 
 #### CREATING NEW
 
@@ -241,4 +242,3 @@ The following settings are required in the Apps Script project’s development d
 # Actions
 
 If existing files, confirm modification
-

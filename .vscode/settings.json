@@ -1,15 +1,15 @@
 {
-  "javascript.suggest.completeJSDocs": true,
-  "markdownlint.config": {
-    "extends": "./desktop/create-gas-project/config/.markdownlint.yml"
-  },
-  "markdown.previewFrontMatter": "show",
-  "json.schemas": [],
-  "xo.format.enable": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "eslint.enable": false,
-  "files.exclude": {
-    ".nyc_output": true
-  }
+	"javascript.suggest.completeJSDocs": true,
+	"markdownlint.config": {
+		"extends": "./desktop/create-gas-project/config/.markdownlint.yml"
+	},
+	"markdown.previewFrontMatter": "show",
+	"json.schemas": [],
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"eslint.enable": true,
+	"files.exclude": {
+		".nyc_output": true
+	},
+	"testExplorer.addToEditorContextMenu": true
 }
