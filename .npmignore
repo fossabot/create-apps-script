@@ -1,7 +1,9 @@
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\scratch.js
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\.travis.yml
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\.editorconfig
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\.vscode
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\test
-..\..\..\..\C:\Users\camer\Desktop\create-gas-project\coverage
-..\..\..\..\C:\Users\camer\Desktop\create-apps-script\notes.js
+scratch.js
+.travis.yml
+.editorconfig
+.vscode
+test
+coverage
+notes.js
+test
+docs
