@@ -1,6 +1,6 @@
 {
 	"name": "create-apps-script",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "A tool to create a new local development package for a Google Apps Script project.",
 	"main": "index.js",
 	"repository": "github:csmith14/create-apps-script",
