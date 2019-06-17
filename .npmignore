@@ -7,3 +7,9 @@ coverage
 notes.js
 test
 docs
+.nyc_output
+yarn-error.log
+.prettierrc
+.eslintrc
+.markdownlint.yml
+tsconfig.json
