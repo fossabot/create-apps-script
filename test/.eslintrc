@@ -1,0 +1,8 @@
+{
+	"root": true,
+	"extends": "standard",
+	"globals": {
+		"CalendarApp": true
+	},
+	"rules": {}
+}

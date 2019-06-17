@@ -4,12 +4,6 @@
 		"extends": "./desktop/create-gas-project/config/.markdownlint.yml"
 	},
 	"markdown.previewFrontMatter": "show",
-	"json.schemas": [],
-	"editor.formatOnSave": true,
-	"editor.formatOnType": true,
 	"eslint.enable": true,
-	"files.exclude": {
-		".nyc_output": true
-	},
 	"testExplorer.addToEditorContextMenu": true
 }

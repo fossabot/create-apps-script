@@ -1,61 +1,65 @@
 {
-  "root": true,
-  "extends": [
-    "standard",
-    "prettier"
-  ],
-  "plugins": [
-    "import",
-    "standard",
-    "node",
-    "promise",
-    "prettier"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "env": {
-    "node": true,
-    "amd": true
-  },
-  "overrides": [
-    {
-      "files": [
-        "test/**"
-      ],
-      "globals": {
-        "describe": true,
-        "it": true,
-        "before": true,
-        "beforeEach": true,
-        "afterEach": true,
-        "after": true
-      }
-    }
-  ],
-  "globals": {},
-  "rules": {
-    "prettier/prettier": "error",
-    "space-in-parens": [
-      "error",
-      "always",
-      {
-        "exceptions": [
-          "empty"
-        ]
-      }
-    ],
-    "padded-blocks": "off",
-    "space-before-blocks": [
-      "error",
-      {
-        "functions": "always"
-      }
-    ],
-    "indent": [
-      "error",
-      2
-    ]
-  }
+	"root": true,
+	"extends": ["standard"],
+	"plugins": [
+		"import",
+		"node",
+		"promise",
+		"json",
+		"json-files",
+		"standard",
+		"prettier"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module"
+	},
+	"env": {
+		"node": true,
+		"commonjs": true
+	},
+	"rules": {
+		"array-bracket-newline": ["error", {
+			"minItems": 2
+		}],
+		"brace-style": ["error", "1tbs", {
+			"allowSingleLine": true
+		}],
+		"function-paren-newline": ["error", "never"],
+		"indent": ["error", "tab"],
+		"json-files/no-branch-in-dependencies": "error",
+		"json-files/require-license": "error",
+		"json-files/sort-package-json": "error",
+		"no-tabs": "off",
+		"object-curly-newline": [
+			"error",
+			{
+				"ExportDeclaration": {
+					"minProperties": 3,
+					"multiline": true
+				},
+				"ImportDeclaration": "never",
+				"ObjectExpression": "always",
+				"ObjectPattern": {
+					"minProperties": 3,
+					"multiline": true
+				}
+			}
+		],
+		"quote-props": ["error", "always"],
+		"padded-blocks": "off",
+		"prettier/prettier": "off",
+		"semi": ["error", "never"],
+		"space-before-blocks": ["error", {
+			"functions": "always"
+		}],
+		"space-in-parens": ["error", "always", {
+			"exceptions": ["empty"]
+		}],
+		"eol-last": ["error", "never"],
+		"no-lonely-if": "error",
+		"padding-line-between-statements": [
+			"error"
+		]
+	}
 }

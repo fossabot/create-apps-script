@@ -1,8 +1,13 @@
+const createConfig = require( '../lib/classes/config' )
 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
 
-const appsscript = {
-	timezone: tz
-}
+const appsscript = createConfig( {
+	'dir': './dist',
+	'name': 'appsscript',
+	'content': {
+		'timezone': tz
+	}
+} )
 
 /*
   Vary the output dependent on:
@@ -18,7 +23,5 @@ const appsscript = {
 
 */
 
-//> Some thing.
-// Some other thing
-/* Some blocky thing */
-/** Some doc-y thing! */
+// ANCHOR module.exports
+module.exports = appsscript

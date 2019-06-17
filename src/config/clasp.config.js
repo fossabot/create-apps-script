@@ -1,4 +1,4 @@
-const clasp = (scriptId, projectId) => {
+const clasp = ( scriptId, projectId ) => {
 	return {
 		scriptId,
 		projectId,
