@@ -19,6 +19,7 @@
   <a href="https://www.npmjs.org/package/create-gas-project">
     <img src="https://img.shields.io/npm/v/create-gas-project.svg?style=flat-square" alt="npm version">
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fcsmith14%2Fcreate-apps-script?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcsmith14%2Fcreate-apps-script.svg?type=shield"/></a>
 
   <br />
 
@@ -54,6 +55,9 @@
 <br>
 
 <hr>
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcsmith14%2Fcreate-apps-script.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcsmith14%2Fcreate-apps-script?ref=badge_large)
 
 # Overview
 
